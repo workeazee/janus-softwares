@@ -6,7 +6,7 @@ import AboutPage from "./pages/AboutPage";
 import Footer from "./pages/Footer";
 function App() {
   return (
-    <div className="App" style={{"overflow-x": "hidden"}}>
+    <div className="App" style={{"overflowX": "hidden"}}>
       <Header />
       <MainPage />
       <ServicesPage />
