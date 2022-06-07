@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Logo from '../assets/janus.png'
+import Logo from "../assets/janus.png";
+import Image from "../assets/images.jpg";
 
 const MainDiv = styled.div`
   display: flex;
@@ -8,8 +9,9 @@ const MainDiv = styled.div`
   justify-content: center;
   background-color: #d3d3d3;
   height: 90vh;
-  width: 100vw;
+  width: 90vw;
   padding: 0 1.5rem;
+  margin: 0 auto;
 `;
 const TextDiv = styled.div`
   width: 60%;
@@ -21,24 +23,32 @@ const TextDiv = styled.div`
   align-items: center;
 `;
 const ImageDiv = styled.div`
-  width: 40%;
+  width: 30%;
   height: 80%;
 `;
 const Img = styled.img`
-width: 100%;
-height: 100%;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
 `;
-const InTextBig = styled.h1``;
-const InTextSmall = styled.h2``;
+const InTextBig = styled.h1`
+  font-size: 5rem;
+`;
+const InTextSmall = styled.h2`
+  font-size: 1.5rem;
+`;
 const MainPage = () => {
   return (
     <MainDiv>
       <TextDiv>
-        <InTextBig></InTextBig>
-        <InTextSmall></InTextSmall>
+        <InTextBig>Lorem Ipsum is simply dummy text of the printing</InTextBig>
+        <InTextSmall>
+          Lorem Ipsum has been the industry's standard dummy text ever since the
+          1500s, when an unknown printer took a galley of type and scrambled it
+        </InTextSmall>
       </TextDiv>
       <ImageDiv>
-        <Img src={Logo}/>
+        <Img src={Image} />
       </ImageDiv>
     </MainDiv>
   );
