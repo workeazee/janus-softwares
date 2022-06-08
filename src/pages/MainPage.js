@@ -7,7 +7,6 @@ const MainDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #d3d3d3;
   height: 90vh;
   width: 90vw;
   padding: 0 1.5rem;
@@ -16,11 +15,11 @@ const MainDiv = styled.div`
 const TextDiv = styled.div`
   width: 60%;
   height: 80%;
-  background-color: blue;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-right: 1rem;
 `;
 const ImageDiv = styled.div`
   width: 30%;
@@ -36,6 +35,7 @@ const InTextBig = styled.h1`
 `;
 const InTextSmall = styled.h2`
   font-size: 1.5rem;
+  color: grey
 `;
 const MainPage = () => {
   return (
