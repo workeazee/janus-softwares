@@ -1,12 +1,22 @@
 import React from "react";
 import styled from "styled-components";
+import Image from "../assets/janus.png";
+import {
+  FaFacebook,
+  FaInstagramSquare,
+  FaLinkedin,
+  FaTwitter,
+  FaGithub,
+} from "react-icons/fa";
+import { BsChevronCompactRight } from "react-icons/bs";
 
 const MainDiv = styled.div`
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  background-color: #d2d2d2;
-  height: 50vh;
+  background-color: turquoise;
+  height: 75vh;
   width: 100vw;
   padding: 0 1.5rem;
   position: relative;
@@ -15,12 +25,13 @@ const MainDiv = styled.div`
 const NewsLetterModal = styled.div`
   height: 20vh;
   width: 75%;
-  background-color: yellow;
   z-index: 9999;
   transform: translateY(-10vh);
   border-radius: 1rem;
   display: flex;
   flex-direction: row;
+  background-color: #008080;
+  padding: 1rem;
 `;
 const Subscribe = styled.div`
   display: flex;
@@ -28,24 +39,118 @@ const Subscribe = styled.div`
   align-items: center;
   justify-content: center;
   height: 100%;
+  padding: 1.6rem;
+  width: 60%;
+  text-align: center;
 `;
 const Email = styled.div`
   height: 100%;
   width: 60%;
-  // background-color: blue;
   display: flex;
   align-items: center;
   justify-content: center;
 `;
-const MainHeading = styled.h3``;
-const SmallParagraph = styled.p``;
-const Input = styled.input`
-  background-color: white;
-  border-radius: 1rem;
-  border: 1px solid black;
-  height: 3rem;
+const MainHeading = styled.h4`
+  margin: 0;
+  font-weight: bold;
+  color: white;
 `;
-const Button = styled.button``;
+const SmallParagraph = styled.p`
+  margin: 0;
+  font-weight: bold;
+  color: white;
+`;
+const Input = styled.input`
+  background-color: white !important;
+  border-radius: 2rem 0 0 2rem !important;
+  height: 3.5rem !important;
+  margin: 0 !important;
+  padding: 0 1.3rem !important;
+  border: none !important;
+`;
+const Button = styled.button`
+  background-color: #d2d2d2;
+  border: none;
+  border-radius: 0 2rem 2rem 0;
+  height: 3.5rem;
+  width: 10rem;
+  background-color: turquoise;
+  color: white;
+  font-weight: bold;
+`;
+const FooterLower = styled.div`
+  height: 35vh;
+  width: 70vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+const AboutLinks = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+`;
+const Contact = styled.div`
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 1.5rem;
+`;
+const Links = styled.div`
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 50%;
+`;
+const Logo = styled.img`
+  height: 60%;
+`;
+const Paragraph = styled.p`
+  height: 40%;
+  font-size: 1.3rem;
+  line-height: 1;
+  margin: 0 0 1rem 0;
+  color: white;
+`;
+const Heading = styled.h5`
+  font-weight: bold;
+  color: white;
+`;
+const OpenEmail = styled.div`
+  height: 80%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+`;
+const ComposeEmail = styled.a`
+  height: 10%;
+  width: 30%;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+
+  &:hover {
+    color: #008080;
+  }
+`;
+const CopyRight = styled.div`
+  margin-top: 3rem;
+  font-size: 1.3rem;
+  color: white;
+`;
 const Footer = () => {
   return (
     <MainDiv>
@@ -62,6 +167,52 @@ const Footer = () => {
           <Button>Subscribe</Button>
         </Email>
       </NewsLetterModal>
+      <FooterLower>
+        <AboutLinks>
+          <Logo src={Image} />
+          <Paragraph>
+            We are a tech company with a mission to help companies extend their
+            business with the help of technology. Founded in 2021, we have
+            satisfied all our clients.
+          </Paragraph>
+          <Links>
+            <FaFacebook
+              size={35}
+              style={{ "margin-right": "1rem", color: "#4267B2" }}
+            />
+            <FaInstagramSquare
+              size={35}
+              style={{ "margin-right": "1rem", color: "#3f729b" }}
+            />
+            <FaLinkedin
+              size={35}
+              style={{ "margin-right": "1rem", color: "#0077b5" }}
+            />
+            <FaTwitter
+              size={35}
+              style={{ "margin-right": "1rem", color: " #00acee" }}
+            />
+            <FaGithub
+              size={35}
+              style={{ "margin-right": "1rem", color: "#171515" }}
+            />
+          </Links>
+        </AboutLinks>
+        <Contact>
+          <Heading>Company</Heading>
+          <OpenEmail>
+            <ComposeEmail>
+              <BsChevronCompactRight />
+              Support
+            </ComposeEmail>
+            <ComposeEmail>
+              <BsChevronCompactRight />
+              Contact
+            </ComposeEmail>
+          </OpenEmail>
+        </Contact>
+      </FooterLower>
+      <CopyRight>Copyright © 2022 Constbase. All Rights Reserved</CopyRight>
     </MainDiv>
   );
 };

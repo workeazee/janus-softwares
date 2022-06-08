@@ -18,6 +18,7 @@ const MainDiv = styled.div`
 const SmallHeader = styled.div`
   font-weight: 500;
   font-size: 1.3rem;
+  color: turquoise;
 `;
 const Flex = styled.div`
   display: flex;
@@ -58,7 +59,6 @@ const Paragraph = styled.div``;
 const Box1 = styled.div`
   height: 20vh;
   width: 15vw;
-  background-color: yellow;
   z-index: 1199;
   position: absolute;
   bottom: 0;
@@ -68,6 +68,12 @@ const Box1 = styled.div`
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
+
+  background: rgba(0,49.8,100,0.25);
+  box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+  backdrop-filter: blur(3.8px);
+  -webkit-backdrop-filter: blur(3.8px);
+  border-radius: 10px;
 
   @keyframes float {
     0% {
@@ -109,7 +115,7 @@ const AboutPage = () => {
         <ImageDiv>
           <Flex>
             <Tile>
-              <FiRefreshCw size={48} />
+              <FiRefreshCw size={48} color="#ffcbcb"/>
               <Heading>Advanced Analysis</Heading>
               <ParagraphSmall>
                 We handle things by first analyzing the problem and then taking
@@ -117,7 +123,7 @@ const AboutPage = () => {
               </ParagraphSmall>
             </Tile>
             <Tile>
-              <BsFillFileEarmarkArrowDownFill size={48} />
+              <BsFillFileEarmarkArrowDownFill size={48} color="#007fff"/>
               <Heading>Optimisation</Heading>
               <ParagraphSmall>
                 Every line of code we write is properly optimized so our clients
@@ -127,7 +133,7 @@ const AboutPage = () => {
           </Flex>
           <Flex>
             <Tile>
-              <BiTime size={48} />
+              <BiTime size={48} color="#90ee90"/>
               <Heading>On Time</Heading>
               <ParagraphSmall>
                 Things may seem a little swingy sometimes but our promise to
@@ -135,7 +141,7 @@ const AboutPage = () => {
               </ParagraphSmall>
             </Tile>
             <Tile>
-              <CgSearchFound size={48} />
+              <CgSearchFound size={48} color="#ce8cf8"/>
               <Heading>Continous Testing</Heading>
               <ParagraphSmall>
                 Work we do here is tested continuously so that the chances of
