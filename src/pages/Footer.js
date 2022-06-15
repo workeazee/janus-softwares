@@ -9,6 +9,7 @@ import {
   FaGithub,
 } from "react-icons/fa";
 import { BsChevronCompactRight } from "react-icons/bs";
+import "../styles/globals.css";
 
 const MainDiv = styled.div`
   display: flex;
@@ -21,6 +22,7 @@ const MainDiv = styled.div`
   padding: 0 1.5rem;
   position: relative;
   margin: 0 auto;
+  margin-top: 8rem;
 `;
 const NewsLetterModal = styled.div`
   height: 28vh;
@@ -53,6 +55,9 @@ const Subscribe = styled.div`
   width: 60%;
 
   @media (max-width: 1000px) {
+    width: 100%;
+  }
+  @media (max-width: 500px) {
     width: 100%;
   }
 `;
@@ -117,6 +122,11 @@ const FooterLower = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    width: 100vw;
+  }
 `;
 const AboutLinks = styled.div`
   display: flex;
@@ -125,6 +135,11 @@ const AboutLinks = styled.div`
   justify-content: center;
   height: 100%;
   width: 50%;
+
+  @media (max-width: 500px) {
+    width: 80%;
+    align-items: center;
+  }
 `;
 const Contact = styled.div`
   height: 100%;
@@ -134,6 +149,11 @@ const Contact = styled.div`
   align-items: flex-start;
   justify-content: center;
   margin-left: 1.5rem;
+
+  @media (max-width: 500px) {
+    width: 80%;
+    margin-left: 0;
+  }
 `;
 const Links = styled.div`
   height: 20%;
@@ -141,9 +161,21 @@ const Links = styled.div`
   align-items: center;
   justify-content: flex-start;
   width: 50%;
+
+  @media (max-width: 950px) {
+    width: 100%;
+    height: 100%;
+  }
+  @media (max-width: 500px) {
+    justify-content: center;
+  }
 `;
 const Logo = styled.img`
   height: 60%;
+
+  @media (max-width: 1000px) {
+    height: 50%;
+  }
 `;
 const Paragraph = styled.p`
   height: 40%;
@@ -155,6 +187,13 @@ const Paragraph = styled.p`
 const Heading = styled.h5`
   font-weight: bold;
   color: white;
+
+  @media (max-width: 950px) {
+    font-size: 2rem;
+  }
+  @media (max-width: 500px) {
+    font-size: 1.6rem;
+  }
 `;
 const OpenEmail = styled.div`
   height: 80%;
@@ -163,10 +202,14 @@ const OpenEmail = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+
+  @media (max-width: 1000px) {
+    justify-content: flex-start;
+  }
 `;
 const ComposeEmail = styled.a`
   height: 10%;
-  width: 30%;
+  width: 40%;
   margin: 0.5rem;
   padding: 0.5rem;
   color: white;
@@ -174,6 +217,7 @@ const ComposeEmail = styled.a`
   align-items: center;
   justify-content: flex-start;
   cursor: pointer;
+  font-size: 1.3rem;
 
   &:hover {
     color: #008080;
@@ -183,6 +227,13 @@ const CopyRight = styled.div`
   margin-top: 3rem;
   font-size: 1.3rem;
   color: white;
+
+  @media (max-width: 1000px) {
+    font-size: 1.6rem;
+  }
+  @media (max-width: 500px) {
+    font-size: 1rem;
+  }
 `;
 const Footer = () => {
   return (
@@ -210,23 +261,23 @@ const Footer = () => {
           </Paragraph>
           <Links>
             <FaFacebook
-              size={35}
+              className="socials"
               style={{ "margin-right": "1rem", color: "#4267B2" }}
             />
             <FaInstagramSquare
-              size={35}
+              className="socials"
               style={{ "margin-right": "1rem", color: "#3f729b" }}
             />
             <FaLinkedin
-              size={35}
+              className="socials"
               style={{ "margin-right": "1rem", color: "#0077b5" }}
             />
             <FaTwitter
-              size={35}
+              className="socials"
               style={{ "margin-right": "1rem", color: " #00acee" }}
             />
             <FaGithub
-              size={35}
+              className="socials"
               style={{ "margin-right": "1rem", color: "#171515" }}
             />
           </Links>

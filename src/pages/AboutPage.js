@@ -138,7 +138,7 @@ const Tile = styled.div`
   justify-content: flex-start;
 
   @media (max-width: 950px) {
-    width: 100%;
+    width: 96%;
   }
   @media (max-width: 600px) {
     justify-content: center;
