@@ -23,7 +23,7 @@ const MainDiv = styled.div`
   margin: 0 auto;
 `;
 const NewsLetterModal = styled.div`
-  height: 20vh;
+  height: 28vh;
   width: 75%;
   z-index: 9999;
   transform: translateY(-10vh);
@@ -32,6 +32,16 @@ const NewsLetterModal = styled.div`
   flex-direction: row;
   background-color: #008080;
   padding: 1rem;
+
+  @media (max-width: 1000px) {
+    width: 95%;
+    flex-direction: column;
+    height: 20vh;
+  }
+  @media (max-width: 500px) {
+    width: 100%;
+    height: 28vh;
+  }
 `;
 const Subscribe = styled.div`
   display: flex;
@@ -41,7 +51,10 @@ const Subscribe = styled.div`
   height: 100%;
   padding: 1.6rem;
   width: 60%;
-  text-align: center;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
 `;
 const Email = styled.div`
   height: 100%;
@@ -49,16 +62,36 @@ const Email = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 1000px) {
+    width: 80%;
+    margin: auto;
+  }
+  @media (max-width: 500px) {
+    width: 100%;
+    margin: auto;
+  }
 `;
 const MainHeading = styled.h4`
   margin: 0;
   font-weight: bold;
   color: white;
+
+  @media (max-width: 500px) {
+    font-size: 1.6rem;
+  }
 `;
 const SmallParagraph = styled.p`
   margin: 0;
   font-weight: bold;
   color: white;
+
+  @media (max-width: 1000px) {
+    font-size: 1.4rem;
+  }
+  @media (max-width: 500px) {
+    font-size: 1rem;
+  }
 `;
 const Input = styled.input`
   background-color: white !important;

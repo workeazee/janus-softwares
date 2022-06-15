@@ -10,7 +10,7 @@ const Header = () => {
       className="white darken-4"
       alignLinks="right"
       brand={
-        <a className={`logoText`} href="#" style={{color: "turquoise"}}>
+        <a className={`logoText`} href="#" style={{ color: "turquoise" }}>
           Janus Softwares
         </a>
       }
@@ -29,13 +29,25 @@ const Header = () => {
         preventScrolling: true,
       }}
     >
-      <NavItem className="" href="" style={{color: "turquoise", "font-size": "1.4rem"}}>
+      <NavItem
+        className=""
+        href=""
+        style={{ color: "turquoise", "font-size": "1.4rem" }}
+      >
         Home
       </NavItem>
-      <NavItem className="" href="components.html" style={{color: "turquoise", "font-size": "1.4rem"}}>
+      <NavItem
+        className=""
+        href="components.html"
+        style={{ color: "turquoise", "font-size": "1.4rem" }}
+      >
         Services
       </NavItem>
-      <NavItem className="" href="components.html" style={{color: "turquoise", "font-size": "1.4rem"}}>
+      <NavItem
+        className=""
+        href="components.html"
+        style={{ color: "turquoise", "font-size": "1.4rem" }}
+      >
         Contacts
       </NavItem>
     </Navbar>

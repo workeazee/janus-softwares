@@ -9,6 +9,13 @@ const MainDiv = styled.div`
   height: 100vh;
   width: 100vw;
   padding: 4rem 7rem;
+
+  @media (max-width: 1100px) {
+    flex-direction: column;
+  }
+  @media (max-width: 750px) {
+    padding: 2rem 1rem;
+  }
 `;
 const ContentDiv = styled.div`
   display: flex;
@@ -17,6 +24,13 @@ const ContentDiv = styled.div`
   justify-content: center;
   width: 50%;
   height: 100%;
+
+  @media (max-width: 1100px) {
+    width: 100%;
+  }
+  @media (max-width: 900px) {
+    justify-content: flex-start;
+  }
 `;
 const ImageDiv = styled.div`
   display: flex;
@@ -26,24 +40,46 @@ const ImageDiv = styled.div`
   width: 50%;
   height: 100%;
   position: relative;
+
+  @media (max-width: 1100px) {
+    width: 100%;
+  }
 `;
 const SmallContent = styled.div`
   font-size: 1.3rem;
   margin-bottom: 1rem;
   color: turquoise;
+
+  @media (max-width: 1100px) {
+    font-size: 1.8rem;
+  }
 `;
 const BigContent = styled.div`
   font-size: 3rem;
   line-height: 0.9;
   margin-bottom: 1.5rem;
+
+  @media (max-width: 900px) {
+    // font-size: 2.5rem;
+  }
+  @media (max-width: 750px) {
+    font-size: 2rem;
+  }
 `;
 const ParagraphDiv = styled.div`
   font-size: 1.3rem;
   line-height: 1.2;
   color: grey;
+
+  @media (max-width: 900px) {
+    font-size: 1.8rem;
+  }
+  @media (max-width: 750px) {
+    font-size: 1.3rem;
+  }
 `;
 const Image = styled.img`
-  width: 60%;
+  width: 80%;
   height: 90%;
   object-fit: cover;
   border-radius: 1rem;
@@ -76,6 +112,11 @@ const Box1 = styled.div`
     100% {
       transform: translate(0, -0px);
     }
+  }
+
+  @media (max-width: 850px) {
+    height: 15vh;
+    width: 25vw;
   }
 `;
 const Box2 = styled.div`

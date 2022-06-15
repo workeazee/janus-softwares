@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { DiDjango } from "react-icons/di";
+// import { DiDjango } from "react-icons/di";
 import { FaReact } from "react-icons/fa";
 
 const MainDiv = styled.div`
@@ -24,6 +24,13 @@ const MainDiv = styled.div`
     background-color: turquoise;
     transform: scale(1.05);
     color: white;
+  }
+
+  @media (max-width: 900px) {
+    width: 45%;
+  }
+  @media (max-width: 600px) {
+    width: 90%;
   }
 `;
 const IconDiv = styled.div`
