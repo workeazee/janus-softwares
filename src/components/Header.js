@@ -1,7 +1,5 @@
 import React from "react";
-import styled from "styled-components";
-import M from "materialize-css";
-import { Button, Icon, Navbar, NavItem } from "react-materialize";
+import { Icon, Navbar, NavItem } from "react-materialize";
 import "../styles/Header.css";
 
 const Header = () => {
