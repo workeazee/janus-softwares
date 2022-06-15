@@ -9,7 +9,13 @@ const MainDiv = styled.div`
   height: 100vh;
   width: 100vw;
   padding: 4rem 7rem;
-  background-color: blue;
+
+  @media (max-width: 1100px) {
+    flex-direction: column;
+  }
+  @media (max-width: 750px) {
+    padding: 2rem 1rem;
+  }
 `;
 const ContentDiv = styled.div`
   display: flex;
@@ -18,7 +24,13 @@ const ContentDiv = styled.div`
   justify-content: center;
   width: 50%;
   height: 100%;
-  background-color: red;
+
+  @media (max-width: 1100px) {
+    width: 100%;
+  }
+  @media (max-width: 900px) {
+    justify-content: flex-start;
+  }
 `;
 const ImageDiv = styled.div`
   display: flex;
@@ -27,24 +39,47 @@ const ImageDiv = styled.div`
   justify-content: center;
   width: 50%;
   height: 100%;
-  background-color: green;
   position: relative;
+
+  @media (max-width: 1100px) {
+    width: 100%;
+  }
 `;
 const SmallContent = styled.div`
   font-size: 1.3rem;
   margin-bottom: 1rem;
+  color: turquoise;
+
+  @media (max-width: 1100px) {
+    font-size: 1.8rem;
+  }
 `;
 const BigContent = styled.div`
   font-size: 3rem;
   line-height: 0.9;
   margin-bottom: 1.5rem;
+
+  @media (max-width: 900px) {
+    // font-size: 2.5rem;
+  }
+  @media (max-width: 750px) {
+    font-size: 2rem;
+  }
 `;
 const ParagraphDiv = styled.div`
   font-size: 1.3rem;
   line-height: 1.2;
+  color: grey;
+
+  @media (max-width: 900px) {
+    font-size: 1.8rem;
+  }
+  @media (max-width: 750px) {
+    font-size: 1.3rem;
+  }
 `;
 const Image = styled.img`
-  width: 60%;
+  width: 80%;
   height: 90%;
   object-fit: cover;
   border-radius: 1rem;
@@ -52,7 +87,6 @@ const Image = styled.img`
 const Box1 = styled.div`
   height: 20vh;
   width: 15vw;
-  background-color: yellow;
   z-index: 1199;
   position: absolute;
   top: 0;
@@ -62,6 +96,11 @@ const Box1 = styled.div`
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
+  background: rgba(0, 49.8, 100, 0.25);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(3.8px);
+  -webkit-backdrop-filter: blur(3.8px);
+  border-radius: 10px;
 
   @keyframes floating {
     0% {
@@ -74,16 +113,25 @@ const Box1 = styled.div`
       transform: translate(0, -0px);
     }
   }
+
+  @media (max-width: 850px) {
+    height: 15vh;
+    width: 25vw;
+  }
 `;
 const Box2 = styled.div`
   height: 30vh;
   width: 15vw;
-  background-color: yellow;
   z-index: 1199;
   position: absolute;
   bottom: 0;
   right: 0;
   border-radius: 1rem;
+  background: rgba(0,49.8,100,0.25);
+  box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+  backdrop-filter: blur(3.8px);
+  -webkit-backdrop-filter: blur(3.8px);
+  border-radius: 10px;
 
   animation-name: floating;
   animation-duration: 3s;

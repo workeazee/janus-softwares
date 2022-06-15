@@ -5,6 +5,7 @@ import { FiRefreshCw } from "react-icons/fi";
 import { BsFillFileEarmarkArrowDownFill } from "react-icons/bs";
 import { BiTime } from "react-icons/bi";
 import { CgSearchFound } from "react-icons/cg";
+import '../styles/globals.css';
 
 const MainDiv = styled.div`
   display: flex;
@@ -14,16 +15,36 @@ const MainDiv = styled.div`
   height: 100vh;
   width: 100vw;
   padding: 4rem 7rem;
+
+  @media (max-width: 1100px) {
+    padding: 4rem 2rem;
+  }
 `;
 const SmallHeader = styled.div`
   font-weight: 500;
   font-size: 1.3rem;
+  color: turquoise;
 `;
 const Flex = styled.div`
   display: flex;
   flex-direction: row;
   height: 90%;
   width: 100%;
+  @media (max-width: 950px) {
+    flex-direction: column;
+  }
+`;
+const Flex2 = styled.div`
+  display: flex;
+  flex-direction: row;
+  height: 90%;
+  width: 100%;
+  @media (max-width: 950px) {
+    flex-direction: column!important;
+  }
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
 const ContentDiv = styled.div`
   display: flex;
@@ -36,6 +57,10 @@ const ContentDiv = styled.div`
   line-height: 1;
   padding-top: 1.5rem;
   position: relative;
+
+  @media (max-width: 950px) {
+    width: 100%;
+  }
 `;
 const ImageDiv = styled.div`
   display: flex;
@@ -46,6 +71,15 @@ const ImageDiv = styled.div`
   height: 100%;
   position: relative;
   margin-left: 2rem;
+
+  @media (max-width: 950px) {
+    width: 100%;
+    flex-direction: row;
+  }
+  @media (max-width: 600px) {
+    flex-direction: column;
+    margin-left: 0;
+  }
 `;
 const Image = styled.img`
   width: 80%;
@@ -53,12 +87,20 @@ const Image = styled.img`
   object-fit: cover;
   border-radius: 1rem;
   margin-top: 2rem;
+
+  @media (max-width: 1100px) {
+    width: 100%;
+    height: 100%;
+  }
 `;
-const Paragraph = styled.div``;
+const Paragraph = styled.div`
+  @media (max-width: 600px) {
+    font-size: 2.5rem;
+  }
+`;
 const Box1 = styled.div`
   height: 20vh;
   width: 15vw;
-  background-color: yellow;
   z-index: 1199;
   position: absolute;
   bottom: 0;
@@ -68,6 +110,12 @@ const Box1 = styled.div`
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
+
+  background: rgba(0,49.8,100,0.25);
+  box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+  backdrop-filter: blur(3.8px);
+  -webkit-backdrop-filter: blur(3.8px);
+  border-radius: 10px;
 
   @keyframes float {
     0% {
@@ -88,13 +136,36 @@ const Tile = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
+  @media (max-width: 950px) {
+    width: 100%;
+  }
+  @media (max-width: 600px) {
+    justify-content: center;
+    width: 100%;
+  }
 `;
 const Heading = styled.div`
   font-size: 2rem;
+
+  @media (max-width: 600px) {
+    font-size: 1.5rem;
+  }
+  @media (max-width: 600px) {
+    align-self: center;
+  }
 `;
 const ParagraphSmall = styled.div`
-  color: GREY;
+  color: grey;
   font-size: 1.1rem;
+
+  @media (max-width: 600px) {
+    font-size: 1rem;
+  }
+  @media (max-width: 600px) {
+    align-self: center;
+    text-align: center;
+  }
 `;
 const AboutPage = () => {
   return (
@@ -107,9 +178,9 @@ const AboutPage = () => {
           <Box1 />
         </ContentDiv>
         <ImageDiv>
-          <Flex>
+          <Flex2>
             <Tile>
-              <FiRefreshCw size={48} />
+              <FiRefreshCw color="#ffcbcb" className="icons"/>
               <Heading>Advanced Analysis</Heading>
               <ParagraphSmall>
                 We handle things by first analyzing the problem and then taking
@@ -117,17 +188,17 @@ const AboutPage = () => {
               </ParagraphSmall>
             </Tile>
             <Tile>
-              <BsFillFileEarmarkArrowDownFill size={48} />
+              <BsFillFileEarmarkArrowDownFill color="#007fff" className="icons"/>
               <Heading>Optimisation</Heading>
               <ParagraphSmall>
                 Every line of code we write is properly optimized so our clients
                 may never face any unwanted glitches.
               </ParagraphSmall>
             </Tile>
-          </Flex>
-          <Flex>
+          </Flex2>
+          <Flex2>
             <Tile>
-              <BiTime size={48} />
+              <BiTime color="#90ee90" className="icons"/>
               <Heading>On Time</Heading>
               <ParagraphSmall>
                 Things may seem a little swingy sometimes but our promise to
@@ -135,14 +206,14 @@ const AboutPage = () => {
               </ParagraphSmall>
             </Tile>
             <Tile>
-              <CgSearchFound size={48} />
+              <CgSearchFound color="#ce8cf8" className="icons"/>
               <Heading>Continous Testing</Heading>
               <ParagraphSmall>
                 Work we do here is tested continuously so that the chances of
                 clingy bugs is reduced to null.
               </ParagraphSmall>
             </Tile>
-          </Flex>
+          </Flex2>
         </ImageDiv>
       </Flex>
     </MainDiv>

@@ -10,13 +10,13 @@ const Header = () => {
       className="white darken-4"
       alignLinks="right"
       brand={
-        <a className={`logoText blue-text`} href="#">
+        <a className={`logoText`} href="#" style={{ color: "turquoise" }}>
           Janus Softwares
         </a>
       }
       centerChildren
       id="mobile-nav"
-      menuIcon={<Icon style={{ color: "blue" }}>menu</Icon>}
+      menuIcon={<Icon style={{ color: "turquoise" }}>menu</Icon>}
       options={{
         draggable: true,
         edge: "left",
@@ -29,13 +29,25 @@ const Header = () => {
         preventScrolling: true,
       }}
     >
-      <NavItem className="blue-text" href="">
+      <NavItem
+        className=""
+        href=""
+        style={{ color: "turquoise", "font-size": "1.4rem" }}
+      >
         Home
       </NavItem>
-      <NavItem className="blue-text" href="components.html">
+      <NavItem
+        className=""
+        href="components.html"
+        style={{ color: "turquoise", "font-size": "1.4rem" }}
+      >
         Services
       </NavItem>
-      <NavItem className="blue-text" href="components.html">
+      <NavItem
+        className=""
+        href="components.html"
+        style={{ color: "turquoise", "font-size": "1.4rem" }}
+      >
         Contacts
       </NavItem>
     </Navbar>
