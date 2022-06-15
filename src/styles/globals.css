@@ -7,3 +7,12 @@
     align-self: center;
   }
 }
+
+.socials{
+  font-size: 120px;
+}
+@media (max-width: 950px) {
+  .socials {
+    font-size: 2.7rem !important;
+  }
+}
