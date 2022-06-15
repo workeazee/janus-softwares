@@ -10,6 +10,10 @@ const MainDiv = styled.div`
   height: 100vh;
   width: 100vw;
   background-color: #f6f4ff;
+
+  @media (max-width: 900px) {
+    height: fit-content;
+  }
 `;
 const HeaderDiv = styled.div`
   height: 15vh;
@@ -19,6 +23,14 @@ const HeaderDiv = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-top: 1rem;
+
+  @media (max-width: 900px) {
+    width: 80vw;
+  }
+  @media (max-width: 600px) {
+    width: 100vw;
+  }
 `;
 const CardsDiv = styled.div`
   display: flex;
@@ -29,12 +41,38 @@ const CardsDiv = styled.div`
   width: 90%;
   height: 85vh;
   padding-top: 1.5rem;
+
+  @media (max-width: 900px) {
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (max-width: 600px) {
+    padding-top: 0;
+  }
 `;
 const SmallText = styled.div`
   font-size: 1.2rem;
+
+  @media (max-width: 900px) {
+    font-size: 1.5rem;
+  }
+  @media (max-width: 600px) {
+    font-size: 1rem;
+  }
 `;
 const LargeText = styled.div`
-  font-size: 3em;
+  font-size: 3rem;
+
+  @media (max-width: 900px) {
+    font-size: 2.7rem;
+  }
+  @media (max-width: 600px) {
+    font-size: 1.5em;
+    margin-top: 2rem;
+  }
 `;
 const Services = () => {
   return (

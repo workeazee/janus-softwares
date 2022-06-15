@@ -12,11 +12,11 @@ function App() {
     <div className="App" style={{ overflowX: "hidden", position: "relative" }}>
       <Header />
       <MainPage />
-      {/* <ServicesPage />
+      <ServicesPage />
       <TechPage />
       <AboutPage />
       <Footer />
-      <ScrollButton /> */}
+      <ScrollButton />
     </div>
   );
 }

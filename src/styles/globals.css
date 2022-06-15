@@ -1,0 +1,9 @@
+.icons {
+    font-size: 3rem;
+}
+@media screen and (max-width: 600px) {
+  .icons {
+    font-size: 2rem;
+    align-self: center;
+  }
+}

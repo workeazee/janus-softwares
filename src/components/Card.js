@@ -25,6 +25,13 @@ const MainDiv = styled.div`
     transform: scale(1.05);
     color: white;
   }
+
+  @media (max-width: 900px) {
+    width: 45%;
+  }
+  @media (max-width: 600px) {
+    width: 90%;
+  }
 `;
 const IconDiv = styled.div`
   display: flex;
