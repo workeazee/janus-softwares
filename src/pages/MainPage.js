@@ -11,19 +11,33 @@ const MainDiv = styled.div`
   width: 90vw;
   padding: 0 1.5rem;
   margin: 0 auto;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 `;
 const TextDiv = styled.div`
-  width: 60%;
+  width: 55%;
   height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-right: 1rem;
+  padding-right: 3rem;
+
+  @media (max-width: 900px) {
+    width: 100%;
+    padding: 0;
+  }
+
 `;
 const ImageDiv = styled.div`
   width: 30%;
   height: 80%;
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 `;
 const Img = styled.img`
   width: 100%;
@@ -32,10 +46,28 @@ const Img = styled.img`
 `;
 const InTextBig = styled.h1`
   font-size: 5rem;
+
+  @media (max-width: 900px) {
+    padding: 0;
+    margin: 0;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 3rem;
+  }
 `;
 const InTextSmall = styled.h2`
   font-size: 1.5rem;
-  color: grey
+  color: grey;
+
+  @media (max-width: 900px) {
+    font-size: 2rem;
+    padding: 0;
+    margin: 3rem 0 0 0;
+  }
+  @media (max-width: 600px) {
+    font-size: 1.3rem;
+  }
 `;
 const MainPage = () => {
   return (

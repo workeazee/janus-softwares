@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { DiDjango } from "react-icons/di";
+// import { DiDjango } from "react-icons/di";
 import { FaReact } from "react-icons/fa";
 
 const MainDiv = styled.div`
