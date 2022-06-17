@@ -7,12 +7,17 @@ const MainDiv = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: fit-content;
   width: 100vw;
   background-color: #f6f4ff;
 
-  @media (max-width: 900px) {
-    height: fit-content;
+  @media (max-width: 1000px) {
+    height: 135vh;
+    justify-content: flex-start;
+  }
+  @media (max-width: 700px) {
+    height: 250vh;
+    justify-content: flex-start;
   }
 `;
 const HeaderDiv = styled.div`
@@ -35,9 +40,6 @@ const HeaderDiv = styled.div`
 const CardsDiv = styled.div`
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
   width: 90%;
   height: 85vh;
   padding-top: 1.5rem;
@@ -45,9 +47,6 @@ const CardsDiv = styled.div`
   @media (max-width: 900px) {
     width: 100%;
     height: 100vh;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
   @media (max-width: 600px) {
     padding-top: 0;

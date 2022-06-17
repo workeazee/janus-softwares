@@ -12,7 +12,7 @@ const MainDiv = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  height: 100vh;
+  height: fit-content;
   width: 100vw;
   padding: 4rem 7rem;
 
