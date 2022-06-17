@@ -1,4 +1,5 @@
 import React from "react";
+import M from 'materialize-css';
 import { Icon, Navbar, NavItem } from "react-materialize";
 import "../styles/Header.css";
 // header
@@ -30,21 +31,21 @@ const Header = () => {
       <NavItem
         className=""
         href=""
-        style={{ color: "turquoise", "font-size": "1.4rem" }}
+        style={{ color: "turquoise", "fontSize": "1.4rem" }}
       >
         Home
       </NavItem>
       <NavItem
         className=""
         href="components.html"
-        style={{ color: "turquoise", "font-size": "1.4rem" }}
+        style={{ color: "turquoise", "fontSize": "1.4rem" }}
       >
         Services
       </NavItem>
       <NavItem
         className=""
         href="components.html"
-        style={{ color: "turquoise", "font-size": "1.4rem" }}
+        style={{ color: "turquoise", "fontSize": "1.4rem" }}
       >
         Contacts
       </NavItem>
