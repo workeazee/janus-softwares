@@ -12,13 +12,14 @@ const MainDiv = styled.div`
   width: 33%;
   background-color: white;
   margin: 1rem;
-  flex: 1 0 23%;
+  // flex: 1 0 23%;
   border-radius: 1rem;
   padding: 1rem;
   box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.26);
   -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.26);
   -moz-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.26);
   transition: all 0.3s ease-in-out;
+  width: calc((100% / 3.2) - 10px);
 
   &:hover {
     background-color: turquoise;
@@ -26,11 +27,11 @@ const MainDiv = styled.div`
     color: white;
   }
 
-  @media (max-width: 900px) {
-    width: 45%;
+  @media (max-width: 1000px) {
+    width: calc(100% / 2.06 - 20px);
   }
   @media (max-width: 600px) {
-    width: 90%;
+    width: calc(100% / 1.02 - 20px);
   }
 `;
 const IconDiv = styled.div`
