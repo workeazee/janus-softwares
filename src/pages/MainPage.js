@@ -7,7 +7,7 @@ const MainDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 90vh;
+  height: 100vh;
   width: 90vw;
   padding: 0 1.5rem;
   margin: 0 auto;

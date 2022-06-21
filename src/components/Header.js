@@ -13,6 +13,9 @@ const Header = () => {
           Janus Softwares
         </a>
       }
+      style={{
+        position: "fixed",
+      }}
       centerChildren
       id="mobile-nav"
       menuIcon={<Icon style={{ color: "turquoise" }}>menu</Icon>}

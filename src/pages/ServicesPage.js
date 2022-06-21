@@ -1,22 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 import Card from "../components/Card";
+import Data from "../components/Data";
 
 const MainDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: fit-content;
+  justify-content: flex-start;
+  height: 150vh;
   width: 100vw;
   background-color: #f6f4ff;
 
   @media (max-width: 1000px) {
-    height: 135vh;
+    height: 210vh;
     justify-content: flex-start;
   }
   @media (max-width: 700px) {
-    height: 250vh;
+    height: 365vh;
     justify-content: flex-start;
   }
 `;
@@ -84,12 +85,14 @@ const Services = () => {
         </SmallText>
       </HeaderDiv>
       <CardsDiv>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {Data.map((item, index) => (
+          <Card 
+            key={index}
+            icon={item.icon}
+            name={item.name}
+            description={item.description}
+          />
+        ))}
       </CardsDiv>
     </MainDiv>
   );
