@@ -262,23 +262,23 @@ const Footer = () => {
           <Links>
             <FaFacebook
               className="socials"
-              style={{ "margin-right": "1rem", color: "#4267B2" }}
+              style={{ "marginRight": "1rem", color: "#4267B2" }}
             />
             <FaInstagramSquare
               className="socials"
-              style={{ "margin-right": "1rem", color: "#3f729b" }}
+              style={{ "marginRight": "1rem", color: "#3f729b" }}
             />
             <FaLinkedin
               className="socials"
-              style={{ "margin-right": "1rem", color: "#0077b5" }}
+              style={{ "marginRight": "1rem", color: "#0077b5" }}
             />
             <FaTwitter
               className="socials"
-              style={{ "margin-right": "1rem", color: " #00acee" }}
+              style={{ "marginRight": "1rem", color: " #00acee" }}
             />
             <FaGithub
               className="socials"
-              style={{ "margin-right": "1rem", color: "#171515" }}
+              style={{ "marginRight": "1rem", color: "#171515" }}
             />
           </Links>
         </AboutLinks>

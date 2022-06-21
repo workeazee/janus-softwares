@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-// import { DiDjango } from "react-icons/di";
-import { FaReact } from "react-icons/fa";
 
 const MainDiv = styled.div`
   display: flex;
@@ -58,16 +56,15 @@ const Header = styled.div`
     color: white;
   }
 `;
-const Card = () => {
+const Card = (props) => {
   return (
     <MainDiv>
       <IconDiv>
-        <FaReact size={56} />
-        <Header>Django</Header>
+        {props.icon}
+        <Header>{props.name}</Header>
       </IconDiv>
       <ContentDiv>
-        Django is a high-level Python web framework that encourages rapid
-        development and clean, pragmatic design.
+        {props.description}
       </ContentDiv>
     </MainDiv>
   );
