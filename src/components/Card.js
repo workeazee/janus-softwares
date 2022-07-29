@@ -10,7 +10,7 @@ const MainDiv = styled.div`
   width: 33%;
   background-color: white;
   margin: 1rem;
-  // flex: 1 0 23%;
+  z-index: 0;
   border-radius: 1rem;
   padding: 1rem;
   box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.26);
