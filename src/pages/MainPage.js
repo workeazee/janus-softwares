@@ -29,7 +29,6 @@ const TextDiv = styled.div`
     width: 100%;
     padding: 0;
   }
-
 `;
 const ImageDiv = styled.div`
   width: 30%;
@@ -73,10 +72,14 @@ const MainPage = () => {
   return (
     <MainDiv>
       <TextDiv>
-        <InTextBig>Lorem Ipsum is simply dummy text of the printing</InTextBig>
+        <InTextBig>Trust. Flexibility. Communication.</InTextBig>
         <InTextSmall>
-          Lorem Ipsum has been the industry's standard dummy text ever since the
-          1500s, when an unknown printer took a galley of type and scrambled it
+          We get projects done! Partnering with you, we build relationships to
+          help drive your business to the next level with the latest
+          technologies, while reducing cost and mitigating risk at your end. We
+          provide outsourced solutions which can be delivered with either time
+          and materials or fixed price fee structures. We specialize in small to
+          medium-sized solutions under $1 million.
         </InTextSmall>
       </TextDiv>
       <ImageDiv>

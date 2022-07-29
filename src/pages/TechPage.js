@@ -40,6 +40,7 @@ const ImageDiv = styled.div`
   width: 50%;
   height: 100%;
   position: relative;
+  z-index: -1;
 
   @media (max-width: 1100px) {
     width: 100%;
@@ -84,65 +85,65 @@ const Image = styled.img`
   object-fit: cover;
   border-radius: 1rem;
 `;
-const Box1 = styled.div`
-  height: 20vh;
-  width: 15vw;
-  z-index: 1199;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 1rem;
-  animation-name: floating;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  background: rgba(0, 49.8, 100, 0.25);
-  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(3.8px);
-  -webkit-backdrop-filter: blur(3.8px);
-  border-radius: 10px;
+// const Box1 = styled.div`
+//   height: 20vh;
+//   width: 15vw;
+//   z-index: 1199;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   border-radius: 1rem;
+//   animation-name: floating;
+//   animation-duration: 3s;
+//   animation-iteration-count: infinite;
+//   animation-timing-function: ease-in-out;
+//   background: rgba(0, 49.8, 100, 0.25);
+//   box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+//   backdrop-filter: blur(3.8px);
+//   -webkit-backdrop-filter: blur(3.8px);
+//   border-radius: 10px;
 
-  @keyframes floating {
-    0% {
-      transform: translate(0, 0);
-    }
-    50% {
-      transform: translate(0, 25px);
-    }
-    100% {
-      transform: translate(0, -0px);
-    }
-  }
+//   @keyframes floating {
+//     0% {
+//       transform: translate(0, 0);
+//     }
+//     50% {
+//       transform: translate(0, 25px);
+//     }
+//     100% {
+//       transform: translate(0, -0px);
+//     }
+//   }
 
-  @media (max-width: 850px) {
-    height: 15vh;
-    width: 25vw;
-  }
-`;
-const Box2 = styled.div`
-  height: 30vh;
-  width: 15vw;
-  z-index: 1199;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  border-radius: 1rem;
-  background: rgba(0,49.8,100,0.25);
-  box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
-  backdrop-filter: blur(3.8px);
-  -webkit-backdrop-filter: blur(3.8px);
-  border-radius: 10px;
+//   @media (max-width: 850px) {
+//     height: 15vh;
+//     width: 25vw;
+//   }
+// `;
+// const Box2 = styled.div`
+//   height: 30vh;
+//   width: 15vw;
+//   z-index: 1199;
+//   position: absolute;
+//   bottom: 0;
+//   right: 0;
+//   border-radius: 1rem;
+//   background: rgba(0,49.8,100,0.25);
+//   box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+//   backdrop-filter: blur(3.8px);
+//   -webkit-backdrop-filter: blur(3.8px);
+//   border-radius: 10px;
 
-  animation-name: floating;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
+//   animation-name: floating;
+//   animation-duration: 3s;
+//   animation-iteration-count: infinite;
+//   animation-timing-function: ease-in-out;
 
-  @keyframes floating {
-    0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0, 25px); }
-    100%   { transform: translate(0, -0px); } 
-`;
+//   @keyframes floating {
+//     0% { transform: translate(0,  0px); }
+//     50%  { transform: translate(0, 25px); }
+//     100%   { transform: translate(0, -0px); } 
+// `;
 const TechPage = () => {
   return (
     <MainDiv>
@@ -152,7 +153,7 @@ const TechPage = () => {
           We Have Qualified Powerful Team To Do It More Faster, Better & Smarter
         </BigContent>
         <ParagraphDiv>
-          Here at constbase we have qualified team who have worked on numerous
+          Here at Janus Softwares we have qualified team who have worked on numerous
           technologies and frameworks and can provide you with top notch service
           , be it an existing project or anew one, our team is here to handle em
           all. <br />
@@ -164,9 +165,9 @@ const TechPage = () => {
         </ParagraphDiv>
       </ContentDiv>
       <ImageDiv>
-        <Box1 />
+        {/* <Box1 /> */}
         <Image src={Images} />
-        <Box2 />
+        {/* <Box2 /> */}
       </ImageDiv>
     </MainDiv>
   );

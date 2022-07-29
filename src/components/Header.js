@@ -1,5 +1,4 @@
 import React from "react";
-import M from 'materialize-css';
 import { Icon, Navbar, NavItem } from "react-materialize";
 import "../styles/Header.css";
 // header
@@ -15,6 +14,7 @@ const Header = () => {
       }
       style={{
         position: "fixed",
+        zIndex: "2",
       }}
       centerChildren
       id="mobile-nav"

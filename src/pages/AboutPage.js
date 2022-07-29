@@ -15,6 +15,7 @@ const MainDiv = styled.div`
   height: fit-content;
   width: 100vw;
   padding: 4rem 7rem;
+  z-index: 0 !important;
 
   @media (max-width: 1100px) {
     padding: 4rem 2rem;
@@ -94,41 +95,42 @@ const Image = styled.img`
   }
 `;
 const Paragraph = styled.div`
+z-index: 0 !important;
   @media (max-width: 600px) {
     font-size: 2.5rem;
   }
 `;
-const Box1 = styled.div`
-  height: 20vh;
-  width: 15vw;
-  z-index: 1199;
-  position: absolute;
-  bottom: 0;
-  left: -2rem;
-  border-radius: 1rem;
-  animation-name: floating;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
+// const Box1 = styled.div`
+//   height: 20vh;
+//   width: 15vw;
+//   z-index: 1199;
+//   position: absolute;
+//   bottom: 0;
+//   left: -2rem;
+//   border-radius: 1rem;
+//   animation-name: floating;
+//   animation-duration: 3s;
+//   animation-iteration-count: infinite;
+//   animation-timing-function: ease-in-out;
 
-  background: rgba(0,49.8,100,0.25);
-  box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
-  backdrop-filter: blur(3.8px);
-  -webkit-backdrop-filter: blur(3.8px);
-  border-radius: 10px;
+//   background: rgba(0,49.8,100,0.25);
+//   box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+//   backdrop-filter: blur(3.8px);
+//   -webkit-backdrop-filter: blur(3.8px);
+//   border-radius: 10px;
 
-  @keyframes float {
-    0% {
-      transform: translate(0, 0px);
-    }
-    50% {
-      transform: translate(25px, 0);
-    }
-    100% {
-      transform: translate(0, -0px);
-    }
-  }
-`;
+//   @keyframes float {
+//     0% {
+//       transform: translate(0, 0px);
+//     }
+//     50% {
+//       transform: translate(25px, 0);
+//     }
+//     100% {
+//       transform: translate(0, -0px);
+//     }
+//   }
+// `;
 const Tile = styled.div`
   height: 90%;
   width: 40%;
@@ -171,11 +173,11 @@ const AboutPage = () => {
   return (
     <MainDiv>
       <SmallHeader>Why Choose Us?</SmallHeader>
-      <Flex>
+      <Flex zIndex="0" >
         <ContentDiv>
           <Paragraph>Make Work Productive & Get Faster Solution</Paragraph>
           <Image src={Images} alt="images" />
-          <Box1 />
+          {/* <Box1 /> */}
         </ContentDiv>
         <ImageDiv>
           <Flex2>

@@ -11,6 +11,7 @@ const MainDiv = styled.div`
   height: 150vh;
   width: 100vw;
   background-color: #f6f4ff;
+  z-index: 1 !important;
 
   @media (max-width: 1000px) {
     height: 210vh;
@@ -44,6 +45,7 @@ const CardsDiv = styled.div`
   width: 90%;
   height: 85vh;
   padding-top: 1.5rem;
+  z-index: 1;
 
   @media (max-width: 900px) {
     width: 100%;
