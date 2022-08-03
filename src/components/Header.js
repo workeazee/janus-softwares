@@ -8,7 +8,7 @@ const Header = () => {
       className="white darken-4"
       alignLinks="right"
       brand={
-        <a className={`logoText`} href="#" style={{ color: "turquoise" }}>
+        <a className={`logoText`} href="/" style={{ color: "turquoise" }}>
           Janus Softwares
         </a>
       }
