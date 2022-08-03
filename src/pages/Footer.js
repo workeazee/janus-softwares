@@ -7,7 +7,10 @@ import {
   FaLinkedin,
   FaTwitter,
   FaGithub,
+  FaWhatsapp,
 } from "react-icons/fa";
+import { FiPhoneCall } from "react-icons/fi";
+import { AiOutlineMail } from "react-icons/ai";
 import { BsChevronCompactRight } from "react-icons/bs";
 import "../styles/globals.css";
 
@@ -197,31 +200,25 @@ const Heading = styled.h5`
 `;
 const OpenEmail = styled.div`
   height: 80%;
-  width: 70%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
 
   @media (max-width: 1000px) {
     justify-content: flex-start;
   }
 `;
-const ComposeEmail = styled.a`
+const ComposeEmail = styled.div`
   height: 10%;
   width: 40%;
-  margin: 0.5rem;
-  padding: 0.5rem;
   color: white;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: flex-start;
-  cursor: pointer;
   font-size: 1.3rem;
-
-  &:hover {
-    color: #008080;
-  }
 `;
 const CopyRight = styled.div`
   margin-top: 3rem;
@@ -234,6 +231,12 @@ const CopyRight = styled.div`
   @media (max-width: 500px) {
     font-size: 1rem;
   }
+`;
+const Span = styled.span`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 `;
 const Footer = () => {
   return (
@@ -262,36 +265,57 @@ const Footer = () => {
           <Links>
             <FaFacebook
               className="socials"
-              style={{ "marginRight": "1rem", color: "#4267B2" }}
+              style={{ marginRight: "1rem", color: "#4267B2" }}
             />
             <FaInstagramSquare
               className="socials"
-              style={{ "marginRight": "1rem", color: "#3f729b" }}
+              style={{ marginRight: "1rem", color: "#3f729b" }}
             />
             <FaLinkedin
               className="socials"
-              style={{ "marginRight": "1rem", color: "#0077b5" }}
+              style={{ marginRight: "1rem", color: "#0077b5" }}
             />
             <FaTwitter
               className="socials"
-              style={{ "marginRight": "1rem", color: " #00acee" }}
+              style={{ marginRight: "1rem", color: " #00acee" }}
             />
             <FaGithub
               className="socials"
-              style={{ "marginRight": "1rem", color: "#171515" }}
+              style={{ marginRight: "1rem", color: "#171515" }}
             />
           </Links>
         </AboutLinks>
         <Contact>
           <Heading>Company</Heading>
+          <a
+            target="_blank"
+            href="https://www.google.com/maps/place/Janus+Softwares/@19.1928522,72.9705314,15z/data=!4m5!3m4!1s0x0:0x8a1b0b9208eec948!8m2!3d19.1928522!4d72.9705314?shorturl=1"
+            rel="noreferrer"
+          >
+            <Paragraph>
+              Address - Registered Office – Janus Softwares – 104/105, A Wing, Manas
+              Residency, Veer Savarkar Marg, Teen Petrol Pump, Thane(W),
+              Maharashtra, India – 400602
+            </Paragraph>
+          </a>
           <OpenEmail>
             <ComposeEmail>
               <BsChevronCompactRight />
-              Support
-            </ComposeEmail>
-            <ComposeEmail>
-              <BsChevronCompactRight />
-              Contact
+              Contact <br />
+              <div>Anurag Baheti CEO </div>
+              <br />
+              <Span>
+                <a href="https://wa.me/9029050299" target="_blank" rel="noreferrer" >
+                  <FaWhatsapp className="contact"/>{" "}
+                </a>
+                <a href="mailto: anil@aummetals.com" target="_blank" rel="noreferrer">
+                  <AiOutlineMail className="contact"/>{" "}
+                </a>
+                <a href="tel:+919029050299" target="_blank" rel="noreferrer">
+                  {" "}
+                  <FiPhoneCall className="contact"/>{" "}
+                </a>
+              </Span>
             </ComposeEmail>
           </OpenEmail>
         </Contact>
