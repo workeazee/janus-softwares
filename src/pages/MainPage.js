@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Logo from "../assets/janus.png";
 import Image from "../assets/images.jpg";
+import { useNav } from '../components/Header/customHooks/useNav';
 
 const MainDiv = styled.div`
   display: flex;
@@ -69,8 +69,9 @@ const InTextSmall = styled.h2`
   }
 `;
 const MainPage = () => {
+  const mainRef = useNav("Home")
   return (
-    <MainDiv>
+    <MainDiv id="mainContainer" ref={mainRef}>
       <TextDiv>
         <InTextBig>Trust. Flexibility. Communication.</InTextBig>
         <InTextSmall>

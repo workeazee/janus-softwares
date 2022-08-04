@@ -13,6 +13,7 @@ import { FiPhoneCall } from "react-icons/fi";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsChevronCompactRight } from "react-icons/bs";
 import "../styles/globals.css";
+import { useNav } from '../components/Header/customHooks/useNav';
 
 const MainDiv = styled.div`
   display: flex;
@@ -239,8 +240,9 @@ const Span = styled.span`
   width: 100%;
 `;
 const Footer = () => {
+  const footerRef = useNav("Contact");
   return (
-    <MainDiv>
+    <MainDiv id="footerContainer" ref={footerRef}>
       <NewsLetterModal>
         <Subscribe>
           <MainHeading>Subscribe Our Newsletter</MainHeading>
