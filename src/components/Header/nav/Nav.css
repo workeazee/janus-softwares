@@ -1,0 +1,54 @@
+nav {
+	width: 100%;
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	padding: 1.2em 0;
+	color: black;
+	background-color: white;
+	height: 4.5em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+nav .div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: turquoise;
+	text-align: center;
+	margin-left: 1rem;
+}
+
+nav h3 {
+	font-size: 1.5rem;
+	margin: 0;
+}
+
+nav span {
+	font-size: 18px;
+	border-bottom: 1px solid transparent;
+	transition: border-bottom 0.2s ease;
+	transition-delay: 0.25s;
+	margin: 1em;
+	/* padding-bottom: 0.3em; */
+}
+
+nav span:hover {
+	cursor: pointer;
+	border-bottom: 1px solid white;
+}
+
+nav span:hover i {
+	color: gold;
+}
+
+nav span.activeClass i {
+	color: gold;
+}
+
+nav span.activeClass {
+	border-bottom-color: var(--lightAccent);
+}
