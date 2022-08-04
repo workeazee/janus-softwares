@@ -6,6 +6,7 @@ import { BsFillFileEarmarkArrowDownFill } from "react-icons/bs";
 import { BiTime } from "react-icons/bi";
 import { CgSearchFound } from "react-icons/cg";
 import '../styles/globals.css';
+import { useNav } from '../components/Header/customHooks/useNav';
 
 const MainDiv = styled.div`
   display: flex;
@@ -170,8 +171,9 @@ const ParagraphSmall = styled.div`
   }
 `;
 const AboutPage = () => {
+  const aboutRef = useNav("Services");
   return (
-    <MainDiv>
+    <MainDiv id="serviceContainer" ref={aboutRef}>
       <SmallHeader>Why Choose Us?</SmallHeader>
       <Flex zIndex="0" >
         <ContentDiv>

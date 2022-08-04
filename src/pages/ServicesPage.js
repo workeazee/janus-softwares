@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Card from "../components/Card";
 import Data from "../components/Data";
+import { useNav } from '../components/Header/customHooks/useNav';
 
 const MainDiv = styled.div`
   display: flex;
@@ -77,8 +78,9 @@ const LargeText = styled.div`
   }
 `;
 const Services = () => {
+  const serviceRef = useNav("Technologies");
   return (
-    <MainDiv>
+    <MainDiv id="techContainer" ref={serviceRef}>
       <HeaderDiv>
         <LargeText>Top Technologies We Work On</LargeText>
         <SmallText>

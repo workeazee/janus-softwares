@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Images from "../assets/images.jpg";
+import { useNav } from '../components/Header/customHooks/useNav';
 
 const MainDiv = styled.div`
   display: flex;
@@ -145,8 +146,9 @@ const Image = styled.img`
 //     100%   { transform: translate(0, -0px); } 
 // `;
 const TechPage = () => {
+  const techRef = useNav("About");
   return (
-    <MainDiv>
+    <MainDiv id="aboutContainer" ref={techRef}>
       <ContentDiv>
         <SmallContent>Who We Are?</SmallContent>
         <BigContent>
