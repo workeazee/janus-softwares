@@ -1,27 +1,43 @@
-// import Header from "./components/Header";
-import MainPage from "./pages/MainPage";
-import ServicesPage from "./pages/ServicesPage";
-import TechPage from "./pages/TechPage";
-import AboutPage from "./pages/AboutPage";
-import Footer from "./pages/Footer";
-import ScrollButton from "./components/ScrollButton/ScrollButton";
-import "./styles/Header.css";
-
-import { Nav } from './components/Header/nav';
-import NavProvider from "./components/Header/context/NavContext";
+import { useRef } from 'react';
+import './App.css';
+import Header from './components/globals/Header';
+import AboutUs from './components/pages/AboutUs';
+import Footer from './components/pages/Footer';
+import Home from './components/pages/Home';
+import Services from './components/pages/Services';
+import Technology from './components/pages/Technology';
 
 function App() {
+  const homeRef = useRef();
+  const techRef  = useRef();
+  const aboutRef = useRef();
+  const servicesRef = useRef();
+  const aboutUsRef = useRef();
+
   return (
-    <div className="App" style={{ overflowX: "hidden", position: "relative" }}>
-      <NavProvider>
-        <Nav />
-        <MainPage />
-        <ServicesPage />
-        <TechPage />
-        <AboutPage />
-        <Footer />
-        <ScrollButton />
-      </NavProvider>
+    <div className="App">
+      <Header
+        homeRef={homeRef}
+        techRef={techRef}
+        aboutRef={aboutRef}
+        servicesRef={servicesRef}
+        aboutUsRef={aboutUsRef}
+      />
+      <Home 
+        homeRef={homeRef}
+      />
+      <Technology 
+        techRef={techRef}
+      />
+      <AboutUs 
+        aboutRef={aboutRef}
+      />
+      <Services 
+        servicesRef={servicesRef}
+      />
+      <Footer 
+        aboutUsRef={aboutUsRef}
+      />
     </div>
   );
 }
