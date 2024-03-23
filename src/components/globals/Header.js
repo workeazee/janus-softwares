@@ -9,17 +9,29 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import Image from "../../images/Janus_Logo.png";
+import Logo from "../../images/Janus_Logo.png";
+import { Drawer } from "@mui/material";
+import CloseIcon from '@mui/icons-material/Close';
+import HomeSVG from "../../images/Home.svg";
+import styled from "styled-components";
+
+
+const Image = styled.img`
+  width: 132px;
+  height: 132px;
+`;
 
 const Header = (props) => {
   const pages = [
-    { name: "Home", reference: props.homeRef },
-    { name: "Technology", reference: props.techRef },
     { name: "About Us", reference: props.aboutRef },
-    { name: "Services", reference: props.servicesRef },
-    { name: "Contact Us", reference: props.aboutUsRef },
+    { name: "Why Us", reference: props.aboutRef },
+    { name: "Our Approach", reference: props.aboutRef },
+    { name: "Solutions", reference: props.aboutRef },
+    { name: "Members", reference: props.aboutRef },
+    { name: "Case Studies", reference: props.aboutRef },
+    { name: "Testimonials", reference: props.aboutRef },
+    { name: "Contact Us", reference: props.aboutRef },
   ];
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
@@ -51,64 +63,46 @@ const Header = (props) => {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            Janus <span style={styles}> Softwares</span>
-          </Typography>
-
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
+        <Box sx={{display:'flex', fexl:1, flexDirection:'row', alignItems:'center', justifyContent:'space-between', width:'100%'}}>
+          <Box sx={{display: { xs: "none", lg: "flex" } , flexDirection:'row', gap: 2, alignItems:'center', justifyContent:'center'}}>
+            <Box sx={{ flexGrow: 0}}>
+                <IconButton sx={{ p: 0 }}>
+                  <Avatar alt="JS" src={Logo} />
+                </IconButton>
+            </Box>
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              href="/"
               sx={{
-                display: { xs: "block", md: "none" },
+                mr: 2,
+                fontFamily: "monospace",
+                fontWeight: 700,
+                letterSpacing: ".3rem",
+                color: "inherit",
+                textDecoration: "none",
               }}
-            >
-              {pages.map((page) => (
-                <MenuItem
-                  key={page.name}
-                  // onClick={handleCloseNavMenu}
-                  onClick={() => {executeScroll(page.reference);}}
-                >
-                  <Typography textAlign="center">{page.name}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
+              >
+              Janus <span style={styles}> Softwares</span>
+            </Typography>
           </Box>
+          <Box sx={{display: { xs: "none", lg: "flex" } }}>
+            {pages.map((page, index) => (
+              <Button
+                className="poppins-regular"
+                key={page.handleOpenNavMenu}
+                // onClick={handleCloseNavMenu}
+                onClick={() => {executeScroll(page.reference);}}
+                sx={{ my: 2, color: index === pages.length-1  ? "#30DCCA" : "white", display: "block", fontSize:16, textTransform: 'none' }}
+              >
+                {page.name}
+              </Button>
+            ))}
+          </Box>
+
+          {/* Mobile View */}
+
           <Typography
             variant="h5"
             noWrap
@@ -116,7 +110,7 @@ const Header = (props) => {
             href=""
             sx={{
               mr: 2,
-              display: { xs: "flex", md: "none" },
+              display: { xs: "flex", lg: "none" },
               flexGrow: 1,
               fontFamily: "monospace",
               fontWeight: 700,
@@ -124,29 +118,71 @@ const Header = (props) => {
               color: "inherit",
               textDecoration: "none",
             }}
-          >
+            >
             Janus <span style={styles}>Softwares</span>
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button
-                key={page.handleOpenNavMenu}
-                // onClick={handleCloseNavMenu}
-                onClick={() => {executeScroll(page.reference);}}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                {page.name}
-              </Button>
-            ))}
-          </Box>
 
-          <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
-            <Tooltip title="Janus Softwares">
-              <IconButton sx={{ p: 0 }}>
-                <Avatar alt="JS" src={Image} />
-              </IconButton>
-            </Tooltip>
+          <Box sx={{ display: { xs: "flex", lg: "none" } }}>
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="inherit"
+              sx={{p: 0}}
+              >
+              <MenuIcon sx={{color:'#30DCCA', bgcolor:'#0E0E0E', p: 1, borderRadius: '3px'}} />
+            </IconButton>
+            <Drawer
+              anchor={'left'}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+            >
+              <Box sx={{width: '253px', bgcolor:'#262626', height:'100%'}}>
+                <Box py={5} px={2} display="flex" flexDirection='row' justifyContent='flex-end'>
+                  <CloseIcon fontSize="medium" sx={{color:"#fff"}} onClick={handleCloseNavMenu}/>
+                </Box>
+
+                <Box display='flex' justifyContent='center' alignItems={'center'} flexDirection={'column'} mb={2}>
+                  <Image src={HomeSVG} />
+                  <Typography 
+                    className="poppins-medium"
+                    component='a'
+                    href=""
+                    noWrap
+                    sx={{
+                      mt: 2,
+                      color: "#ffffff",
+                      textDecoration: "none",
+                      fontSize: '18px'
+                  }}>
+                      Janus Softwares
+                  </Typography>
+                  <Typography 
+                    className="poppins-regular"  
+                    sx={{
+                      color: "#ffffff",
+                      textDecoration: "none",
+                      fontSize: '13px'
+                  }}>
+                      One Stop Online Solutions
+                  </Typography>
+                </Box>
+
+              {pages.map((page, index) => (
+                <MenuItem
+                key={page.name}
+                onClick={() => {executeScroll(page.reference);}}
+                >
+                  <Typography textAlign="center" className="poppins-regular" color={index === pages.length-1  ? "#30DCCA" : "#ffffff"} fontSize={'14px'}>{page.name}</Typography>
+                </MenuItem>
+              ))}
+              </Box>
+            </Drawer>
           </Box>
+          
+        </Box>
         </Toolbar>
       </Container>
     </AppBar>
