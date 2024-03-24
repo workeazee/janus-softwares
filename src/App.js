@@ -10,6 +10,7 @@ import Clients from './components/pages/Clients';
 import WhyUs from './components/pages/WhyUs';
 import OurApproach from './components/pages/OurApproach';
 import Solutions from './components/pages/Solutions';
+import TeamMembers from './components/pages/Team';
 
 function App() {
   const homeRef = useRef();
@@ -39,9 +40,10 @@ function App() {
       />
       <OurApproach />
       <Solutions />
-      <Technology 
+      <TeamMembers />
+      {/* <Technology 
         techRef={techRef}
-      />
+      /> */}
       <Footer 
         aboutUsRef={aboutUsRef}
       />
