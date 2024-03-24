@@ -9,6 +9,7 @@ import Technology from './components/pages/Technology';
 import Clients from './components/pages/Clients';
 import WhyUs from './components/pages/WhyUs';
 import OurApproach from './components/pages/OurApproach';
+import Solutions from './components/pages/Solutions';
 
 function App() {
   const homeRef = useRef();
@@ -37,6 +38,7 @@ function App() {
         servicesRef={servicesRef}
       />
       <OurApproach />
+      <Solutions />
       <Technology 
         techRef={techRef}
       />

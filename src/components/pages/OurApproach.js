@@ -29,6 +29,7 @@ const OurApproach = () => {
           fontSize={"3rem"}
           lineHeight={"4.75rem"}
           color={"#30DCCA"}
+          textAlign={{ xs: "center", lg: "start" }}
         >
           Our Approach
         </Typography>
@@ -39,6 +40,8 @@ const OurApproach = () => {
           lineHeight={"1.5rem"}
           color={"#fff"}
           width={{ xs: "100%", md: "80%" }}
+
+          textAlign={{ xs: "center", lg: "start" }}
         >
           Streamline reporting, customer experiences, drive efficiency with
           web-app driven Processes.
@@ -50,6 +53,7 @@ const OurApproach = () => {
           lineHeight={"1.5rem"}
           color={"#fff"}
           width={{ xs: "100%", md: "80%" }}
+          textAlign={{ xs: "center", lg: "start" }}
         >
           With future-proof technology, agile practices, market acumen and our
           highly experienced team, we create web applications that are engaging
