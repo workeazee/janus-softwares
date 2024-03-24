@@ -1,161 +1,88 @@
+import { Box, Typography } from "@mui/material";
 import React from "react";
-import styled from "styled-components";
-import ServiceSVG from "../../images/Services.svg";
-import Service from "../page-components/Service";
-import Data from "../page-components/ServiceData";
-import { Color } from "./Footer";
-const MainDiv = styled.div`
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 2rem;
+import DeliveredImg from "../../images/Home.svg";
+import TickImg from "../../images/icons/tick-symbol.svg";
+import DotsImg from "../../images/icons/SaaS-Ornament-Dot.webp.svg";
 
-  @media (max-width: 900px) {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 2rem;
-  }
-`;
-const LeftDiv = styled.div`
-  height: 100vh;
-  width: 50%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding-left: 4rem;
+const pros = [
+  { point: "Our user-friendly interface makes it easy to stay organized." },
+  { point: "Our user-friendly interface makes it easy to stay organized." },
+  { point: "Our user-friendly interface makes it easy to stay organized." },
+  { point: "Track progress with real-time updates." },
+  { point: "Prioritize tasks and delegate them to team members with ease." },
+];
 
-  @media (max-width: 1200px) {
-    width: 70%;
-    padding-left: 1rem;
-    padding-top: 2rem;
-    width: 100%;
-  }
-  @media (max-width: 900px) {
-    margin-bottom: 3rem;
-  }
-`;
-const MediumText = styled.h3`
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: 300;
-  margin: 0;
-  padding: 0;
-  font-family: "Lora", sans-serif;
-
-  @media (max-width: 1200px) {
-    font-size: 1.6rem;
-  }
-  @media (max-width: 650px) {
-    font-size: 1rem;
-  }
-`;
-const LargeText = styled.h1`
-  color: #fff;
-  font-size: 3rem;
-  font-family: "Lora", sans-serif;
-
-  @media (max-width: 1200px) {
-    font-size: 2.5rem;
-  }
-  @media (max-width: 650px) {
-    font-size: 1.5rem;
-  }
-`;
-
-const RightDiv = styled.div`
-  height: 100vh;
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0 4rem;
-
-  @media (max-width: 1200px) {
-    width: 100%;
-    padding-right: 0;
-    padding: 0;
-  }
-`;
-const Image = styled.img`
-  @media (max-width: 1200px) {
-    width: 50%;
-    margin: auto;
-  }
-`;
-const Upper = styled.div`
-  height: 20vh;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 1rem;
-
-  @media (max-width: 1200px) {
-    height: 10vh;
-  }
-  @media (max-width: 650px) {
-    margin: 1rem;
-    margin-bottom: 2rem;
-  }
-`;
-const Lower = styled.div`
-  height: 20vh;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-
-  @media (max-width: 650px) {
-    height: 35vh;
-    justify-content: space-between;
-  }
-`;
-
-const Services = props => {
+const Img = (props) => {
   return (
-    <MainDiv ref={props.servicesRef} >
-      <LeftDiv>
-        <MediumText><Color>Why Choose Us?</Color></MediumText>
-        <LargeText>Make Work Productive & Get Faster Solution</LargeText>
-        <Image src={ServiceSVG} />
-      </LeftDiv>
-      <RightDiv>
-        <Upper>
-          {Data.slice(0, 2).map((item) => {
-            return (
-              <Service
-                key={item.id}
-                name={item.name}
-                icon={item.icon}
-                description={item.description}
-              />
-            );
-          })}
-        </Upper>
-        <Lower>
-          {Data.slice(2, 4).map((item) => {
-            return (
-              <Service
-                key={item.id}
-                name={item.name}
-                icon={item.icon}
-                description={item.description}
-              />
-            );
-          })}
-        </Lower>
-      </RightDiv>
-    </MainDiv>
+    <Box position={"relative"} textAlign={"center"}>
+      <img
+        src={DeliveredImg}
+        style={{ position: "relative", zIndex: 999 }}
+        {...props}
+      />
+    </Box>
+  );
+};
+
+const Services = () => {
+  return (
+    <Box
+      display={"flex"}
+      flexDirection={"row"}
+      justifyContent={"space-between"}
+      alignItems={"center"}
+      marginTop={{ xs: 10, lg: 0 }}
+    >
+      <Box display={{ xs: "none", md: "block" }} width={"50%"}>
+        <Img width={611} height={492} />
+      </Box>
+      <Box
+        width={{ xs: "100%", md: "50%" }}
+        display={"flex"}
+        flexDirection={"column"}
+        gap={{ xs: 3, lg: 2 }}
+      >
+        <Typography
+          className="poppins-medium"
+          fontSize={"3rem"}
+          lineHeight={"4.75rem"}
+          color={"#30DCCA"}
+          textAlign={{ xs: "center", lg: "start" }}
+        >
+          Why Choose Us
+        </Typography>
+        <Typography
+          className="plus-jakarta-sans"
+          fontSize={"1rem"}
+          lineHeight={"1.5rem"}
+          color={"#fff"}
+          width={{ xs: "100%", md: "65%" }}
+          textAlign={{ xs: "center", lg: "start" }}
+        >
+          Stay focused and motivated with visually appealing user interface and
+          the reminders feature that helps you focus on what’s important here
+          and now, without missing a beat.
+        </Typography>
+        <Box display={{ xs: "block", md: "none" }} width={"100%"}>
+          <Img width={"100%"} />
+        </Box>
+        <Box>
+          {pros.map((item, index) => (
+            <Box key={index} display="flex" alignItems="center" gap={2} my={1.5}>
+              <img src={TickImg} />
+              <Typography
+                className="plus-jakarta-sans"
+                fontSize={"1rem"}
+                lineHeight={"1.5rem"}
+                color={"#fff"}
+              >
+                {item.point}
+              </Typography>
+            </Box>
+          ))}
+        </Box>
+      </Box>
+    </Box>
   );
 };
 

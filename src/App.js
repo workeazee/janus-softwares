@@ -8,6 +8,7 @@ import Services from './components/pages/Services';
 import Technology from './components/pages/Technology';
 import Clients from './components/pages/Clients';
 import WhyUs from './components/pages/WhyUs';
+import OurApproach from './components/pages/OurApproach';
 
 function App() {
   const homeRef = useRef();
@@ -32,12 +33,12 @@ function App() {
       <AboutUs 
         aboutRef={aboutRef}
       />
-      <WhyUs />
-      <Technology 
-        techRef={techRef}
-      />
       <Services 
         servicesRef={servicesRef}
+      />
+      <OurApproach />
+      <Technology 
+        techRef={techRef}
       />
       <Footer 
         aboutUsRef={aboutUsRef}
