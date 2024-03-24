@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import HomeSVG from "../../images/Services.svg";
-import homeBgLg from "../../images/gradients/homeBgLg.svg"
-import scroll from "../../images/icons/scroll.svg"
-import { Color } from './Footer';
+import homeBgLg from "../../images/gradients/homeBgLg.svg";
+import scroll from "../../images/icons/scroll.svg";
+import { Color } from "./Footer";
 import { Box, Typography } from "@mui/material";
 
 const MainDiv = styled.div`
-  height: 95vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -17,8 +17,7 @@ const MainDiv = styled.div`
 
   @media (max-width: 900px) {
     flex-direction: column-reverse;
-    align-items: center;
-    justify-content: center;
+    justify-content: normal;
   }
 `;
 const LeftDiv = styled.div`
@@ -34,6 +33,7 @@ const LeftDiv = styled.div`
   @media (max-width: 1200px) {
     width: 100%;
     padding: 0;
+    justify-content: normal;
   }
 `;
 const RightDiv = styled.div`
@@ -86,45 +86,61 @@ const HeadingTwo = styled.h2`
   }
 `;
 
-const Bg = styled.div `
+const Bg = styled.div`
   position: absolute;
   top: 0;
   right: 0;
   z-index: 99;
 
-
   @media (max-width: 650px) {
     display: none;
   }
-`
+`;
 
-const Home = props => {
-
+const Home = (props) => {
   return (
     <Box>
-      <MainDiv ref={props.homeRef} >
+      <MainDiv ref={props.homeRef}>
         <LeftDiv>
-          <HeadingOne className="plus-jakarta-sans">Trust, <Color>Flexibility, </Color>Communication.</HeadingOne>
-          <HeadingTwo className="plus-jakarta-sans"> 
+          <HeadingOne className="plus-jakarta-sans">
+            Trust, <Color>Flexibility, </Color>Communication.
+          </HeadingOne>
+          <HeadingTwo className="plus-jakarta-sans">
             We get projects done! Partnering with you, we build relationships to
             help drive your business to the next level with the latest
-            technologies, while reducing cost and mitigating risk at your end. We
-            provide outsourced solutions which can be delivered with either time
-            and materials or fixed price fee structures. We specialize in small to
-            medium-sized solutions under $1 million.
+            technologies, while reducing cost and mitigating risk at your end.
+            We provide outsourced solutions which can be delivered with either
+            time and materials or fixed price fee structures. We specialize in
+            small to medium-sized solutions under $1 million.
           </HeadingTwo>
         </LeftDiv>
         <RightDiv>
           <Image src={HomeSVG} />
         </RightDiv>
       </MainDiv>
-      <Box display={{xs: 'none', md: 'flex'}} zIndex={999} flexDirection={'column'} alignItems={'center'} justifyContent={'center'} position={'relative'} bottom={100} gap={.5}>
-        <img src={scroll} style={{cursor:'pointer'}}/>
-        <Typography color={"#ffffff"} className="poppins-medium"> Scroll Down </Typography>
+      <Box
+        display={{ xs: "none", md: "flex" }}
+        zIndex={999}
+        flexDirection={"column"}
+        alignItems={"center"}
+        justifyContent={"center"}
+        position={"absolute"}
+        bottom={80}
+        gap={0.5}
+        ml={"auto"}
+        mr={"auto"}
+        left={0}
+        right={0}
+        textAlign={"center"}
+      >
+        <img src={scroll} style={{ cursor: "pointer" }} />
+        <Typography color={"#ffffff"} className="poppins-medium">
+          Scroll Down
+        </Typography>
       </Box>
-      <Bg>
-        <img src={homeBgLg}/>
-      </Bg>
+      {/* <Bg>
+        <img src={homeBgLg} />
+      </Bg> */}
     </Box>
   );
 };
