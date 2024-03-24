@@ -2,6 +2,7 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
 import Anurag from "../../images/Anurag.jpg";
+import Anmol from "../../images/Anmol.jpg";
 
 const Highlighted = styled.span`
   color: #3acbbc;
@@ -22,23 +23,24 @@ const members = [
   {
     img: Anurag,
     name: "Anurag Baheti",
-    role: "CEO",
+    role: "CEO & Co-Founder",
   },
   {
-    img:Anurag,
-    name: "Anmol Baheti",
-    role: "CEO",
+    img: Anmol,
+    name: "Anmol Bhutada",
+    role: "CTO & Co-Founder",
   },
 ];
 
-const TeamMembers = () => {
+const TeamMembers = (props) => {
   return (
     <Box
+      ref={props.teamMembersRef}
       display="flex"
       flexDirection={"column"}
       alignItems={"center"}
       justifyContent={"center"}
-      gap={{ xs: 2, md: 4 }}
+      gap={{ xs: 1.5, md: 3 }}
       my={{ xs: 5, md: 10 }}
     >
       <Typography
@@ -57,14 +59,14 @@ const TeamMembers = () => {
         textAlign={"center"}
       >
         Unveiling the <Highlighted>Heart</Highlighted> and{" "}
-        <Highlighted>Soul</Highlighted> of Our Company: Our{" "}
-        <Highlighted>Exceptional</Highlighted> Team Members 🚀
+        <Highlighted>Soul</Highlighted> of Our Company:
+        <br /> Our <Highlighted>Exceptional</Highlighted> Team Members 🚀
       </Typography>
       <Box
-        display={{xs:'none', md:"flex"}}
+        display={{ xs: "none", md: "flex" }}
         flexDirection={"row"}
         alignItems={"center"}
-        justifyContent={'center'}
+        justifyContent={"center"}
         gap={5}
         width={"100%"}
         overflowX={"scroll"}
@@ -93,7 +95,7 @@ const TeamMembers = () => {
               fontSize={"1rem"}
               color={"#fff"}
             >
-              {member.role.toLocaleUpperCase()}
+              {member.role}
             </Typography>
           </Box>
         ))}

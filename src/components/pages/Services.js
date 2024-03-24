@@ -24,9 +24,10 @@ const Img = (props) => {
   );
 };
 
-const Services = () => {
+const Services = (props) => {
   return (
     <Box
+      ref={props.servicesRef}
       display={"flex"}
       flexDirection={"row"}
       justifyContent={"space-between"}

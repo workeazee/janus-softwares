@@ -23,7 +23,7 @@ export const Color = styled.span`
 
 const Footer = (props) => {
   return (
-    <MainDiv ref={props.aboutUsRef}>
+    <MainDiv ref={props.footerRef}>
       <Box
         display="flex"
         flexDirection={{xs:'column', md:"row"}}
@@ -105,9 +105,9 @@ const Footer = (props) => {
             // textAlign={{xs:'center', md: 'start'}}
           >
             <Color>
-              <BiMap /> Address - Registered Office – Janus Softwares – 104/105,
+              <BiMap /> Address - Registered Office - Janus Softwares - 104/105,
               A Wing, Manas Residency, Veer Savarkar Marg, Teen Petrol Pump,
-              Thane(W), Maharashtra, India – 400602
+              Thane(W), Maharashtra, India - 400602
             </Color>
           </Typography>
 
@@ -127,7 +127,7 @@ const Footer = (props) => {
             lineHeight={"150%"}
             color={"#fff"}
           >
-            +919029050299
+            +91 9029050299
           </Typography>
           </Box>
         </Box>

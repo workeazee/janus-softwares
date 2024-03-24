@@ -25,13 +25,13 @@ const Image = styled.img`
 const Header = (props) => {
   const pages = [
     { name: "About Us", reference: props.aboutRef },
-    { name: "Why Us", reference: props.aboutRef },
-    { name: "Our Approach", reference: props.aboutRef },
-    { name: "Solutions", reference: props.aboutRef },
-    { name: "Members", reference: props.aboutRef },
+    { name: "Why Us", reference: props.servicesRef },
+    { name: "Our Approach", reference: props.ourApproachRef },
+    { name: "Solutions", reference: props.solutionsRef },
+    { name: "Members", reference: props.teamMembersRef },
     { name: "Case Studies", reference: props.aboutRef },
     { name: "Testimonials", reference: props.aboutRef },
-    { name: "Contact Us", reference: props.aboutRef },
+    { name: "Contact Us", reference: props.contactRef },
   ];
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 

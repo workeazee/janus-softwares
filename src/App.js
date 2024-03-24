@@ -11,25 +11,33 @@ import WhyUs from './components/pages/WhyUs';
 import OurApproach from './components/pages/OurApproach';
 import Solutions from './components/pages/Solutions';
 import TeamMembers from './components/pages/Team';
+import Contact from './components/pages/Contact';
 
 function App() {
   const homeRef = useRef();
-  const techRef  = useRef();
   const aboutRef = useRef();
   const servicesRef = useRef();
-  const aboutUsRef = useRef();
+  const ourApproachRef = useRef();
+  const solutionsRef = useRef();
+  const teamMembersRef = useRef();
+  const contactRef = useRef();
+  const footerRef = useRef();
 
   return (
     <div className="App">
       <Header
         homeRef={homeRef}
-        techRef={techRef}
         aboutRef={aboutRef}
         servicesRef={servicesRef}
-        aboutUsRef={aboutUsRef}
+        ourApproachRef={ourApproachRef}
+        solutionsRef={solutionsRef}
+        teamMembersRef={teamMembersRef}
+        contactRef={contactRef}
+        footerRef={footerRef}
       />
       <Home 
         homeRef={homeRef}
+        aboutRef={aboutRef}
       />
       {/* <Clients /> */}
       <AboutUs 
@@ -38,14 +46,15 @@ function App() {
       <Services 
         servicesRef={servicesRef}
       />
-      <OurApproach />
-      <Solutions />
-      <TeamMembers />
+      <OurApproach ourApproachRef={ourApproachRef} />
+      <Solutions solutionsRef={solutionsRef} />
+      <TeamMembers teamMembersRef={teamMembersRef} />
       {/* <Technology 
         techRef={techRef}
       /> */}
+      <Contact contactRef={contactRef} />
       <Footer 
-        aboutUsRef={aboutUsRef}
+        footerRef={footerRef}
       />
     </div>
   );
