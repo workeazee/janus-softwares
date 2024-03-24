@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import HomeSVG from "../../images/Home.svg";
+import HomeSVG from "../../images/Services.svg";
+import homeBgLg from "../../images/gradients/homeBgLg.svg"
+import scroll from "../../images/icons/scroll.svg"
 import { Color } from './Footer';
+import { Box, Typography } from "@mui/material";
 
 const MainDiv = styled.div`
   height: 95vh;
@@ -10,9 +13,10 @@ const MainDiv = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  z-index: 999;
 
   @media (max-width: 900px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
   }
@@ -25,11 +29,11 @@ const LeftDiv = styled.div`
   justify-content: center;
   align-items: left;
   padding-left: 4rem;
+  z-index: 999;
 
   @media (max-width: 1200px) {
     width: 100%;
-    padding-left: 1rem;
-    padding-top: 2rem;
+    padding: 0;
   }
 `;
 const RightDiv = styled.div`
@@ -40,6 +44,7 @@ const RightDiv = styled.div`
   justify-content: center;
   align-items: center;
   padding-right: 4rem;
+  z-index: 999;
 
   @media (max-width: 1200px) {
     width: 80%;
@@ -50,56 +55,77 @@ const RightDiv = styled.div`
   }
 `;
 const Image = styled.img`
+  width: 32rem;
+  height: 31rem;
   @media (max-width: 1200px) {
     width: 100%;
   }
 `;
 const HeadingOne = styled.h1`
   color: #fff;
-  font-size: 5rem;
   margin: 0;
-  font-family: "Lora", sans-serif;
+  line-height: 108%;
+  font-size: 3rem;
 
-  @media (max-width: 1200px) {
-    font-size: 3rem;
-  }
   @media (max-width: 650px) {
     font-size: 1.5rem;
+    text-align: center;
   }
 `;
 const HeadingTwo = styled.h2`
   color: #fff;
-  font-family: "Lora", sans-serif;
-  font-weight: 300;
+  line-height: 150.8%;
+  font-weigt: 300;
+  width: 40rem;
+  font-size: 1.6rem;
 
-  @media (max-width: 1200px) {
-    font-size: 1.6rem;
-  }
   @media (max-width: 650px) {
     font-size: 1rem;
+    width: 100%;
+    text-align: center;
   }
 `;
+
+const Bg = styled.div `
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 99;
+
+
+  @media (max-width: 650px) {
+    display: none;
+  }
+`
 
 const Home = props => {
 
   return (
-    <MainDiv ref={props.homeRef} >
-      <LeftDiv>
-        <HeadingOne>Trust.<Color>Flexibility.</Color></HeadingOne>
-        <HeadingOne>Communication.</HeadingOne>
-        <HeadingTwo>
-          We get projects done! Partnering with you, we build relationships to
-          help drive your business to the next level with the latest
-          technologies, while reducing cost and mitigating risk at your end. We
-          provide outsourced solutions which can be delivered with either time
-          and materials or fixed price fee structures. We specialize in small to
-          medium-sized solutions under $1 million.
-        </HeadingTwo>
-      </LeftDiv>
-      <RightDiv>
-        <Image src={HomeSVG} />
-      </RightDiv>
-    </MainDiv>
+    <Box>
+      <MainDiv ref={props.homeRef} >
+        <LeftDiv>
+          <HeadingOne className="plus-jakarta-sans">Trust, <Color>Flexibility, </Color>Communication.</HeadingOne>
+          <HeadingTwo className="plus-jakarta-sans"> 
+            We get projects done! Partnering with you, we build relationships to
+            help drive your business to the next level with the latest
+            technologies, while reducing cost and mitigating risk at your end. We
+            provide outsourced solutions which can be delivered with either time
+            and materials or fixed price fee structures. We specialize in small to
+            medium-sized solutions under $1 million.
+          </HeadingTwo>
+        </LeftDiv>
+        <RightDiv>
+          <Image src={HomeSVG} />
+        </RightDiv>
+      </MainDiv>
+      <Box display={{xs: 'none', md: 'flex'}} zIndex={999} flexDirection={'column'} alignItems={'center'} justifyContent={'center'} position={'relative'} bottom={100} gap={.5}>
+        <img src={scroll} style={{cursor:'pointer'}}/>
+        <Typography color={"#ffffff"} className="poppins-medium"> Scroll Down </Typography>
+      </Box>
+      <Bg>
+        <img src={homeBgLg}/>
+      </Bg>
+    </Box>
   );
 };
 
