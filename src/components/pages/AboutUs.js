@@ -70,7 +70,7 @@ const AboutUs = (props) => {
       <HeaderDiv>
         <Typography
           className="poppins-medum"
-          fontSize={{ xs: '1.5rem', md: "3rem"}}
+          fontSize={{ xs: '2rem', md: "3rem"}}
           color="#30DCCA"
           lineHeight={{xs: '2rem', md: "4rem"}}
           textAlign={"center"}
@@ -79,7 +79,7 @@ const AboutUs = (props) => {
         </Typography>
         <Typography
           className="plus-jakarta-sans"
-          fontSize={{ xs: '.9rem' , md: "1.3rem"}}
+          fontSize={{ xs: '1rem' , md: "1.3rem"}}
           color="#ffffff"
           lineHeight={"150%"}
           textAlign={"center"}
@@ -87,7 +87,12 @@ const AboutUs = (props) => {
           margin={'auto'}
         >
           Providing you with the cutting{" "}
-          <Typography component={"span"} color="#30DCCA">
+          <Typography component={"span"} color="#30DCCA" className="plus-jakarta-sans"
+          fontSize={{ xs: '.9rem' , md: "1.3rem"}}
+          lineHeight={"150%"}
+          textAlign={"center"}
+          width={{xs: '70%', md: '100%'}}
+          margin={'auto'}>
             edge solutions
           </Typography>{" "}
           that the tech world has.
