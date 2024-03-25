@@ -15,11 +15,11 @@ const Item = ({ img, name, desc }) => {
       height={{ xs: 500, md: 360 }}
       bgcolor={"#262626"}
       borderRadius={"1rem"}
-      margin={{xs: 'auto', md: 5}}
+      margin={{ xs: "auto", md: 5 }}
       overflow={"hidden"}
     >
       <Box
-        height={{xs: '25%', md: "35%"}}
+        height={{ xs: "25%", md: "35%" }}
         bgcolor={"#ffffff"}
         display={"flex"}
         flexDirection={"row"}
@@ -40,7 +40,7 @@ const Item = ({ img, name, desc }) => {
         </Typography>
       </Box>
       <Box
-        height={{ xs: '75%' , md: "65%"}}
+        height={{ xs: "75%", md: "65%" }}
         display={"flex"}
         flexDirection={"row"}
         alignItems={"center"}
@@ -114,7 +114,7 @@ const Employess = (props) => {
         flexDirection={"row"}
         alignItems={"center"}
         justifyContent={"space-between"}
-        width={'100%'}
+        width={"100%"}
       >
         <Typography
           className="plus-jakarta-sans"
@@ -129,29 +129,52 @@ const Employess = (props) => {
         </Typography>
 
         <Box
-          display={{xs: 'none', md: "flex"}}
+          display={{ xs: "none", md: "flex" }}
           flexDirection={"row"}
           alignItems={"center"}
           justifyContent={"center"}
           gap={3}
           pr={2}
         >
-          <Box className="custom-prev-button" width={55} height={55} bgcolor={'#30DCCA'} borderRadius={'50%'} textAlign={'center'} display={'flex'} alignItems={'center'} justifyContent={'center'}>
-            <ArrowBackRoundedIcon sx={{color: '#ffffff'}} />
+          <Box
+            className="custom-prev-button"
+            width={55}
+            height={55}
+            bgcolor={"#30DCCA"}
+            borderRadius={"50%"}
+            textAlign={"center"}
+            display={"flex"}
+            alignItems={"center"}
+            justifyContent={"center"}
+          >
+            <ArrowBackRoundedIcon sx={{ color: "#ffffff" }} />
           </Box>
-          <Box className="custom-next-button" width={55} height={55} bgcolor={'#30DCCA'} borderRadius={'50%'} textAlign={'center'} display={'flex'} alignItems={'center'} justifyContent={'center'}>
-            <ArrowForwardRoundedIcon sx={{color: '#ffffff'}} />
+          <Box
+            className="custom-next-button"
+            width={55}
+            height={55}
+            bgcolor={"#30DCCA"}
+            borderRadius={"50%"}
+            textAlign={"center"}
+            display={"flex"}
+            alignItems={"center"}
+            justifyContent={"center"}
+          >
+            <ArrowForwardRoundedIcon sx={{ color: "#ffffff" }} />
           </Box>
         </Box>
       </Box>
 
-      <Box width={"100vw"} display={{xs: 'none', md: 'bock'}}>
+      <Box width={"100vw"} display={{ xs: "none", md: "block" }}>
         <swiper-container
           navigation-next-el=".custom-next-button"
           navigation-prev-el=".custom-prev-button"
           slides-per-view="3"
-          scrollbar-clickable="true"
+          space-between="100" 
+          scrollbar-clickable="true" 
           mousewheel-invert="true"
+          pagination-clickable="true"
+          pagination-dynamic-bullets="true"
           autoplay-delay="2000"
           autoplay-disable-on-interaction="true"
           center-slides="true"
@@ -181,7 +204,7 @@ const Employess = (props) => {
           </swiper-slide>
         </swiper-container>
       </Box>
-      <Box width={"100vw"} display={{xs: 'block', md: 'none'}}>
+      <Box width={"100vw"} display={{ xs: "block", md: "none" }}>
         <swiper-container
           slides-per-view="1"
           autoplay-delay="2000"
