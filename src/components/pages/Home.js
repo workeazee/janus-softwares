@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import HomeSVG from "../../images/Services.svg";
-import homeBgLg from "../../images/gradients/gradientBgHome.png";
 import scroll from "../../images/icons/scroll.svg";
 import { Color } from "./Footer";
 import { Box, Typography } from "@mui/material";

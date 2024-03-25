@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
-import img from "../../images/solutions.svg";
+import img from "../../images/solutions.png";
 
 const Highlighted = styled.span`
   color: #3acbbc;
