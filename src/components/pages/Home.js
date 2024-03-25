@@ -7,7 +7,7 @@ import { Color } from "./Footer";
 import { Box, Typography } from "@mui/material";
 
 const MainDiv = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -18,6 +18,7 @@ const MainDiv = styled.div`
   @media (max-width: 900px) {
     flex-direction: column-reverse;
     justify-content: normal;
+    margin-bottom: 2rem;
   }
 `;
 const LeftDiv = styled.div`
@@ -66,9 +67,10 @@ const HeadingOne = styled.h1`
   margin: 0;
   line-height: 108%;
   font-size: 3rem;
+  font-weight: bold;
 
   @media (max-width: 650px) {
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: center;
   }
 `;

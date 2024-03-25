@@ -171,8 +171,6 @@ const Employess = (props) => {
           navigation-prev-el=".custom-prev-button"
           slides-per-view="3"
           space-between="100" 
-          scrollbar-clickable="true" 
-          mousewheel-invert="true"
           pagination-clickable="true"
           pagination-dynamic-bullets="true"
           autoplay-delay="2000"

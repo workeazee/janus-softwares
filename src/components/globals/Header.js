@@ -16,7 +16,6 @@ import CloseIcon from '@mui/icons-material/Close';
 import HomeSVG from "../../images/Home.svg";
 import styled from "styled-components";
 
-
 const Image = styled.img`
   width: 132px;
   height: 132px;
@@ -139,8 +138,8 @@ const Header = (props) => {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
             >
-              <Box sx={{width: '253px', bgcolor:'#262626', height:'100%'}}>
-                <Box py={5} px={2} display="flex" flexDirection='row' justifyContent='flex-end'>
+              <Box sx={{width: '253px', bgcolor:'#262626', height:'100%', overflowY:'scroll'}}>
+                <Box py={{xs: 2, md: 5}} px={2} display="flex" flexDirection='row' justifyContent='flex-end' position={'sticky'} top={0}>
                   <CloseIcon fontSize="medium" sx={{color:"#fff"}} onClick={handleCloseNavMenu}/>
                 </Box>
 
