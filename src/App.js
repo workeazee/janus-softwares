@@ -12,6 +12,10 @@ import OurApproach from './components/pages/OurApproach';
 import Solutions from './components/pages/Solutions';
 import TeamMembers from './components/pages/Team';
 import Contact from './components/pages/Contact';
+import Employess from './components/pages/Employess';
+import { register } from "swiper/element/bundle";
+
+register();
 
 function App() {
   const homeRef = useRef();
@@ -22,6 +26,7 @@ function App() {
   const teamMembersRef = useRef();
   const contactRef = useRef();
   const footerRef = useRef();
+  const employeeRef = useRef();
 
   return (
     <div className="App">
@@ -34,6 +39,7 @@ function App() {
         teamMembersRef={teamMembersRef}
         contactRef={contactRef}
         footerRef={footerRef}
+        employeeRef={employeeRef}
       />
       <Home 
         homeRef={homeRef}
@@ -52,6 +58,7 @@ function App() {
       {/* <Technology 
         techRef={techRef}
       /> */}
+      <Employess employeeRef={employeeRef} />
       <Contact contactRef={contactRef} />
       <Footer 
         footerRef={footerRef}

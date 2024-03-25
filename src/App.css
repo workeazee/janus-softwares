@@ -1,6 +1,7 @@
 body {
   background: #0E0E0E;
   font-family: "Lora", sans-serif;
+  overflow-x: hidden;
 }
 /* width */
 ::-webkit-scrollbar {
@@ -133,3 +134,16 @@ body {
   font-weight: 300;
   font-style: normal;
 }
+
+swiper-container {
+  width: 100vw;
+  height: 100%;
+  text-align: center;
+}
+
+swiper-slide {
+  width: 100%;
+
+  /* padding-right: 3rem; */
+}
+

@@ -63,8 +63,8 @@ const TeamMembers = (props) => {
         <br /> Our <Highlighted>Exceptional</Highlighted> Team Members 🚀
       </Typography>
       <Box
-        display={{ xs: "none", md: "flex" }}
-        flexDirection={"row"}
+        display='flex'
+        flexDirection={{xs: "column" , md: "row"}}
         alignItems={"center"}
         justifyContent={"center"}
         gap={5}

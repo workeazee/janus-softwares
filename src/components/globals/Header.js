@@ -29,8 +29,8 @@ const Header = (props) => {
     { name: "Our Approach", reference: props.ourApproachRef },
     { name: "Solutions", reference: props.solutionsRef },
     { name: "Members", reference: props.teamMembersRef },
-    { name: "Case Studies", reference: props.aboutRef },
-    { name: "Testimonials", reference: props.aboutRef },
+    // { name: "Case Studies", reference: props.aboutRef },
+    { name: "Testimonials", reference: props.employeeRef },
     { name: "Contact Us", reference: props.contactRef },
   ];
   const [anchorElNav, setAnchorElNav] = React.useState(null);
