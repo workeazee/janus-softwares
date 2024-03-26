@@ -99,7 +99,6 @@ const Img = styled.img`
 `;
 
 const Home = (props) => {
-
   const executeScroll = (reference) => {
     reference.current.scrollIntoView({ behavior: "smooth" });
   };
@@ -138,10 +137,16 @@ const Home = (props) => {
         left={0}
         right={0}
         textAlign={"center"}
-        onClick={() => {executeScroll(props.aboutRef)}}
+        onClick={() => {
+          executeScroll(props.aboutRef);
+        }}
       >
         <img src={scroll} style={{ cursor: "pointer" }} />
-        <Typography color={"#ffffff"} className="poppins-medium">
+        <Typography
+          color={"#ffffff"}
+          className="poppins-medium"
+          sx={{ cursor: "pointer" }}
+        >
           Scroll Down
         </Typography>
       </Box>

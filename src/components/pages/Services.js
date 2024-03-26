@@ -5,8 +5,8 @@ import TickImg from "../../images/icons/tick-symbol.svg";
 import DotsImg from "../../images/icons/SaaS-Ornament-Dot.webp.svg";
 
 const pros = [
-  { point: "Our user-friendly interface makes it easy to stay organized." },
-  { point: "Our user-friendly interface makes it easy to stay organized." },
+  { point: "Navigate seamlessly through our software with an intuitive interface." },
+  { point: "Stay informed and in control with real-time updates on project progress." },
   { point: "Our user-friendly interface makes it easy to stay organized." },
   { point: "Track progress with real-time updates." },
   { point: "Prioritize tasks and delegate them to team members with ease." },

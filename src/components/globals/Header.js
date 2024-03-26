@@ -138,7 +138,7 @@ const Header = (props) => {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
             >
-              <Box sx={{width: '253px', bgcolor:'#262626', height:'100%', overflowY:'scroll'}}>
+              <Box sx={{width: '253px', bgcolor:'#262626', height:'100%', overflowY:'auto'}}>
                 <Box py={{xs: 2, md: 5}} px={2} display="flex" flexDirection='row' justifyContent='flex-end' position={'sticky'} top={0}>
                   <CloseIcon fontSize="medium" sx={{color:"#fff"}} onClick={handleCloseNavMenu}/>
                 </Box>

@@ -7,6 +7,7 @@ import parthDp from "../../images/parth_jain.jpeg";
 import siddheshDp from "../../images/siddhesh_shinde.jpeg";
 import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded";
 import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
+import souravDp from '../../images/sourav_kumar.jpeg'
 
 const Item = ({ img, name, desc }) => {
   return (
@@ -28,7 +29,7 @@ const Item = ({ img, name, desc }) => {
         gap={3}
         borderRadius={"1rem"}
       >
-        <Avatar src={img} sx={{ width: 80, height: 80 }} />
+        <Avatar src={img} sx={{ width: 80, height: 80}} />
         <Typography
           color={"#000229"}
           className="plus-jakarta-sans"
@@ -87,6 +88,11 @@ const employees = [
     name: "Sourabh",
     img: sourabhDp,
     desc: "It has been a privilege working with Jenus Software.  Jenus consistently operates at the forefront of technology, fostering an environment that values and cultivates individual capabilities. Their unwavering trust in my abilities has propelled my growth, while interactions with peers from diverse backgrounds have enriched my understanding of core technologies and organizational practices.",
+  },
+  {
+    name: "Sourav Kumar",
+    img: souravDp,
+    desc: "Working as a frontend developer at Janus Softwares during my early career was an invaluable experience. The supportive environment and challenging projects pushed me to grow and learn beyond my expectations. I'm grateful for the opportunity to contribute to such a dynamic team and for the mentorship that helped shape my skills as a developer.",
   },
 ];
 
@@ -206,7 +212,7 @@ const Employess = (props) => {
         <swiper-container
           slides-per-view="1"
           autoplay-delay="2000"
-          autoplay-disable-on-interaction="true"
+          autoplay-disable-on-interaction="false"
           center-slides="true"
           pagination="false"
           style={{
