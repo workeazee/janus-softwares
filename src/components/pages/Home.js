@@ -13,11 +13,13 @@ const MainDiv = styled.div`
   justify-content: space-between;
   align-items: center;
   z-index: 999;
+  margin-top: 2rem;
 
   @media (max-width: 900px) {
     flex-direction: column-reverse;
     justify-content: normal;
     margin-bottom: 2rem;
+    margin-top: 0;
   }
 `;
 const LeftDiv = styled.div`
@@ -38,7 +40,7 @@ const LeftDiv = styled.div`
 `;
 const RightDiv = styled.div`
   height: 100%;
-  width: 50%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,7 +49,7 @@ const RightDiv = styled.div`
   z-index: 999;
 
   @media (max-width: 1200px) {
-    width: 80%;
+    width: 100%;
     padding-right: 0;
     padding-top: 2rem;
     align-items: center;
@@ -77,24 +79,12 @@ const HeadingTwo = styled.h2`
   color: #fff;
   line-height: 150.8%;
   font-weigt: 300;
-  width: 40rem;
   font-size: 1.6rem;
 
   @media (max-width: 650px) {
     font-size: 1rem;
     width: 100%;
     text-align: center;
-  }
-`;
-
-const Img = styled.img`
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 99;
-
-  @media (max-width: 650px) {
-    display: none;
   }
 `;
 
@@ -130,7 +120,7 @@ const Home = (props) => {
         alignItems={"center"}
         justifyContent={"center"}
         position={"absolute"}
-        bottom={80}
+        bottom={'5%'}
         gap={0.5}
         ml={"auto"}
         mr={"auto"}

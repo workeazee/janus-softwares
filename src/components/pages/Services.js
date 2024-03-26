@@ -2,11 +2,17 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import DeliveredImg from "../../images/Home.svg";
 import TickImg from "../../images/icons/tick-symbol.svg";
-import DotsImg from "../../images/icons/SaaS-Ornament-Dot.webp.svg";
+import DotsImg from "../../images/icons/dots-icon.svg";
 
 const pros = [
-  { point: "Navigate seamlessly through our software with an intuitive interface." },
-  { point: "Stay informed and in control with real-time updates on project progress." },
+  {
+    point:
+      "Navigate seamlessly through our software with an intuitive interface.",
+  },
+  {
+    point:
+      "Stay informed and in control with real-time updates on project progress.",
+  },
   { point: "Our user-friendly interface makes it easy to stay organized." },
   { point: "Track progress with real-time updates." },
   { point: "Prioritize tasks and delegate them to team members with ease." },
@@ -34,8 +40,17 @@ const Services = (props) => {
       alignItems={"center"}
       marginTop={{ xs: 10, lg: 0 }}
     >
-      <Box display={{ xs: "none", md: "block" }} width={"50%"}>
-        <Img width={611} height={492} />
+      <Box
+        display={{ xs: "none", md: "block" }}
+        width={"50%"}
+      >
+        <Box 
+        position={"relative"} width={'600px'} margin={'auto'}>
+          <Img width={611} height={492} />
+          <Box position="absolute" right={10} bottom={-40}>
+            <img src={DotsImg} />
+          </Box>
+        </Box>
       </Box>
       <Box
         width={{ xs: "100%", md: "50%" }}
@@ -69,7 +84,13 @@ const Services = (props) => {
         </Box>
         <Box>
           {pros.map((item, index) => (
-            <Box key={index} display="flex" alignItems="center" gap={2} my={1.5}>
+            <Box
+              key={index}
+              display="flex"
+              alignItems="center"
+              gap={2}
+              my={1.5}
+            >
               <img src={TickImg} />
               <Typography
                 className="plus-jakarta-sans"

@@ -12,15 +12,13 @@ import souravDp from '../../images/sourav_kumar.jpeg'
 const Item = ({ img, name, desc }) => {
   return (
     <Box
-      width={{ xs: 350, md: 580 }}
-      height={{ xs: 500, md: 360 }}
+      width='100%'
+      minHeight={{ xs: 500, md: 360 }}
       bgcolor={"#262626"}
       borderRadius={"1rem"}
       margin={{ xs: "auto", md: 5 }}
-      overflow={"hidden"}
     >
       <Box
-        height={{ xs: "25%", md: "35%" }}
         bgcolor={"#ffffff"}
         display={"flex"}
         flexDirection={"row"}
@@ -28,6 +26,7 @@ const Item = ({ img, name, desc }) => {
         px={3}
         gap={3}
         borderRadius={"1rem"}
+        py={1}
       >
         <Avatar src={img} sx={{ width: 80, height: 80}} />
         <Typography
@@ -41,12 +40,14 @@ const Item = ({ img, name, desc }) => {
         </Typography>
       </Box>
       <Box
-        height={{ xs: "75%", md: "65%" }}
         display={"flex"}
         flexDirection={"row"}
         alignItems={"center"}
         justifyContent={"center"}
         px={3.5}
+        py={2}
+        flex={1}
+        overflow={'auto'}
       >
         <Typography
           color={"#ffffff"}
@@ -54,6 +55,12 @@ const Item = ({ img, name, desc }) => {
           fontSize={"1.125rem"}
           lineHeight={"1.81rem"}
           textAlign={"start"}
+          sx={{
+            overflowWrap: 'break-word',
+            wordBreak: 'break-word',
+            maxHeight: '100%',
+            overflowY: 'auto',
+          }}
         >
           “{desc}”
         </Typography>
@@ -176,7 +183,7 @@ const Employess = (props) => {
           navigation-next-el=".custom-next-button"
           navigation-prev-el=".custom-prev-button"
           slides-per-view="3"
-          space-between="100" 
+          space-between="10" 
           pagination-clickable="true"
           pagination-dynamic-bullets="true"
           autoplay-delay="2000"

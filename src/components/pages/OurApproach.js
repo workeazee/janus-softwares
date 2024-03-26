@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 const Img = styled.img`
   height: 550px;
+  width: 650px;
 
   @media (max-width: 700px) {
     height: 300px;
@@ -26,7 +27,7 @@ const OurApproach = (props) => {
       py={5}
     >
       <Box
-        width={{ xs: "100%", lg: "40%" }}
+        width={{ xs: "100%", lg: "50%" }}
         px={{ xs: 0, md: "4rem" }}
         display={"flex"}
         flexDirection={"column"}
@@ -48,7 +49,7 @@ const OurApproach = (props) => {
           fontSize={"1rem"}
           lineHeight={"1.5rem"}
           color={"#fff"}
-          width={{ xs: "100%", md: "80%" }}
+          width={{ xs: "100%", md: "90%" }}
           textAlign={{ xs: "center", lg: "start" }}
         >
           Streamline reporting, customer experiences, drive efficiency with
@@ -60,7 +61,7 @@ const OurApproach = (props) => {
           fontSize={"1rem"}
           lineHeight={"1.5rem"}
           color={"#fff"}
-          width={{ xs: "100%", md: "80%" }}
+          width={{ xs: "100%", md: "90%" }}
           textAlign={{ xs: "center", lg: "start" }}
         >
           With future-proof technology, agile practices, market acumen and our
@@ -71,7 +72,7 @@ const OurApproach = (props) => {
         </Typography>
       </Box>
       <Box
-        width={{ xs: "100%", lg: "60%" }}
+        width={{ xs: "100%", lg: "50%" }}
         textAlign={"center"}
         mt={{ xs: 5, md: 0 }}
       >
