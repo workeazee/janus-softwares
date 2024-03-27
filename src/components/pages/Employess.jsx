@@ -113,6 +113,8 @@ const Employess = (props) => {
       justifyContent={"center"}
       gap={{ xs: 1.5, md: 3 }}
       my={{ xs: 5, md: 10 }}
+      zIndex={999}
+      position={'relative'}
     >
       <Typography
         className="poppins-medium"

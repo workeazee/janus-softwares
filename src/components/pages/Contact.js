@@ -74,6 +74,7 @@ const Contact = (props) => {
         width: "100%",
       }}
       py={10}
+      zIndex={999}
     >
       <Box
         px={{ xs: 2.5, md: 5 }}

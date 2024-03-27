@@ -5,6 +5,7 @@ import DownloadsImg from "../../images/downloads.svg";
 import DeliveredImg from "../../images/projects_delivered.svg";
 import { Box, Typography } from "@mui/material";
 import CircularProgressWithLabel from "../globals/CircularProgressWithLabel";
+import bg from '../../images/gradients/green_gradient_cr.svg'
 
 const MainDiv = styled.div`
   min-height: 100vh;
@@ -14,6 +15,8 @@ const MainDiv = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 2rem;
+  z-index: 999;
+  position: relative;
 `;
 
 const HeaderDiv = styled.div`
@@ -67,6 +70,7 @@ const RightCol = styled.div`
 
 const AboutUs = (props) => {
   return (
+    <Box position={'relative'}>
     <MainDiv ref={props.aboutRef}>
       <HeaderDiv>
         <Typography
@@ -214,6 +218,10 @@ const AboutUs = (props) => {
         </RightCol>
       </Container>
     </MainDiv>
+    <Box display={{xs:'none', md:"flex"}} position={"absolute"} top={'-310px'} left={'-950px'} zIndex={99}>
+        <img src={bg} />
+      </Box>
+    </Box>
   );
 };
 

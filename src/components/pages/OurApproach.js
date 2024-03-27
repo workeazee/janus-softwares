@@ -25,6 +25,8 @@ const OurApproach = (props) => {
       justifyContent={"space-between"}
       my={{ xs: 5, md: 10 }}
       py={5}
+      zIndex={999}
+      position={'relative'}
     >
       <Box
         width={{ xs: "100%", lg: "50%" }}
