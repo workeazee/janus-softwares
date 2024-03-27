@@ -160,7 +160,7 @@ const Contact = (props) => {
       ref={props.contactRef}
       display="flex"
       flexDirection={{ xs: "column", md: "row" }}
-      alignItems={"start"}
+      alignItems={{xs: "center", md: 'start'}}
       justifyContent={"space-around"}
       sx={{
         backgroundImage: `url(${bgImg})`,
