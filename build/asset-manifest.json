@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.9c00100e.css",
-    "main.js": "/static/js/main.9de6f2f5.js",
-    "static/js/162.36281bf4.chunk.js": "/static/js/162.36281bf4.chunk.js",
+    "main.js": "/static/js/main.86644a68.js",
+    "static/js/162.452e1694.chunk.js": "/static/js/162.452e1694.chunk.js",
     "static/js/870.a748fcee.chunk.js": "/static/js/870.a748fcee.chunk.js",
     "static/js/846.0e8dcec6.chunk.js": "/static/js/846.0e8dcec6.chunk.js",
     "static/js/443.639b53ce.chunk.js": "/static/js/443.639b53ce.chunk.js",
@@ -25,7 +25,7 @@
     "static/media/downloads.svg": "/static/media/downloads.e08642e90b4d0ea4450cbb05591d94f7.svg",
     "static/media/projects_delivered.svg": "/static/media/projects_delivered.1ec83a70225a669575bccbb28690e18a.svg",
     "static/media/contact_bg.png": "/static/media/contact_bg.17019597890e24f0fd43.png",
-    "static/media/Janus_Logo.png": "/static/media/Janus_Logo.43135c4eb4f4d1600acd.png",
+    "static/media/Janus_Logo.png": "/static/media/Janus_Logo.6dfa9618dad3c3113964.png",
     "static/media/Anurag.jpg": "/static/media/Anurag.49e24a5e7864c61171b0.jpg",
     "static/media/sreejal_ranjan.jpeg": "/static/media/sreejal_ranjan.90a498babdc9b1f81462.jpeg",
     "static/media/siddhesh_shinde.jpeg": "/static/media/siddhesh_shinde.809e6e067a5a59ce29da.jpeg",
@@ -46,8 +46,8 @@
     "static/media/tick-symbol.svg": "/static/media/tick-symbol.8f8bb01a842dd6163ce1bb53e785107d.svg",
     "static/media/scroll.svg": "/static/media/scroll.15517b0f6c0d1a6c3a9d43c9b5f0ab77.svg",
     "main.9c00100e.css.map": "/static/css/main.9c00100e.css.map",
-    "main.9de6f2f5.js.map": "/static/js/main.9de6f2f5.js.map",
-    "162.36281bf4.chunk.js.map": "/static/js/162.36281bf4.chunk.js.map",
+    "main.86644a68.js.map": "/static/js/main.86644a68.js.map",
+    "162.452e1694.chunk.js.map": "/static/js/162.452e1694.chunk.js.map",
     "870.a748fcee.chunk.js.map": "/static/js/870.a748fcee.chunk.js.map",
     "846.0e8dcec6.chunk.js.map": "/static/js/846.0e8dcec6.chunk.js.map",
     "443.639b53ce.chunk.js.map": "/static/js/443.639b53ce.chunk.js.map",
@@ -70,6 +70,6 @@
   },
   "entrypoints": [
     "static/css/main.9c00100e.css",
-    "static/js/main.9de6f2f5.js"
+    "static/js/main.86644a68.js"
   ]
 }
