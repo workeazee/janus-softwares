@@ -69,7 +69,7 @@ const Header = (props) => {
     <AppBar
       position="fixed"
       sx={{
-        backgroundColor: isTop ? 'transparent' : '#2b2b2b',
+        backgroundColor: isTop ? 'transparent' : '#262626',
         backdropFilter: isTop ? 'none' : 'blur(10px)',
         transition: 'background-color 0.3s, backdrop-filter 0.3s',
       }}

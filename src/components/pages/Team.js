@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Anurag from "../../images/Anurag.jpg";
 import Anmol from "../../images/Anmol.jpg";
 import bg from "../../images/gradients/green_gradient_cr.svg";
+import bgMd from '../../images/gradients/green_gradient_md.svg'
 
 const Highlighted = styled.span`
   color: #3acbbc;
@@ -115,6 +116,24 @@ const TeamMembers = (props) => {
         zIndex={99}
       >
         <img src={bg} />
+      </Box>
+      <Box
+        display={{ xs: "flex", md: "none" }}
+        position={"absolute"}
+        top={"-250px"}
+        right={"-50px"}
+        zIndex={99}
+      >
+        <img src={bgMd} />
+      </Box>
+      <Box
+        display={{ xs: "flex", md: "none" }}
+        position={"absolute"}
+        bottom={"-250px"}
+        left={"-50px"}
+        zIndex={99}
+      >
+        <img src={bgMd} />
       </Box>
     </Box>
   );

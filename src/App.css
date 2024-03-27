@@ -7,6 +7,19 @@ body {
   background: #0E0E0E;
   font-family: "Lora", sans-serif;
   overflow-x: hidden;
+  margin: 0;
+}
+
+.App{
+
+  @media(max-width: 600px) {
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+}
+
+#root{
+  overflow-x: hidden;
 }
 /* width */
 ::-webkit-scrollbar {

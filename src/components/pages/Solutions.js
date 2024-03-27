@@ -3,6 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import img from "../../images/solutions.png";
 import bg from "../../images/gradients/green_gradient_cr.svg";
+import bgMd from '../../images/gradients/green_gradient_md.svg'
 
 const Highlighted = styled.span`
   color: #3acbbc;
@@ -63,6 +64,15 @@ const Solutions = (props) => {
         zIndex={99}
       >
         <img src={bg} />
+      </Box>
+      <Box
+        display={{ xs: "flex", md: "none" }}
+        position={"absolute"}
+        top={"-300px"}
+        left={"-50px"}
+        zIndex={99}
+      >
+        <img src={bgMd} />
       </Box>
     </Box>
   );

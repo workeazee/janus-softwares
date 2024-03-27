@@ -4,6 +4,7 @@ import DeliveredImg from "../../images/Home.svg";
 import TickImg from "../../images/icons/tick-symbol.svg";
 import DotsImg from "../../images/icons/dots-icon.svg";
 import bg from "../../images/gradients/green_gradient_cr.svg";
+import bgMd from '../../images/gradients/green_gradient_md.svg'
 
 const pros = [
   {
@@ -114,6 +115,24 @@ const Services = (props) => {
         zIndex={99}
       >
         <img src={bg} />
+      </Box>
+      <Box
+        display={{ xs: "flex", md: "none" }}
+        position={"absolute"}
+        top={"-400px"}
+        left={"-50px"}
+        zIndex={99}
+      >
+        <img src={bgMd} />
+      </Box>
+      <Box
+        display={{ xs: "flex", md: "none" }}
+        position={"absolute"}
+        bottom={"-300px"}
+        right={"-50px"}
+        zIndex={99}
+      >
+        <img src={bgMd} />
       </Box>
     </Box>
   );
