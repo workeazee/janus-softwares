@@ -139,7 +139,7 @@ const Footer = (props) => {
             lineHeight={"150%"}
             color={"#fff"}
           >
-            Copyright © 2024 Janus Softwares. All Rights Reserved
+            Copyright © 2024 Janus Softwares. All Rights Reserved.
           </Typography>
       </Box>
     </MainDiv>
