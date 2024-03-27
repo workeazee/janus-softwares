@@ -5,6 +5,8 @@ import DownloadsImg from "../../images/downloads.svg";
 import DeliveredImg from "../../images/projects_delivered.svg";
 import { Box, Typography } from "@mui/material";
 import CircularProgressWithLabel from "../globals/CircularProgressWithLabel";
+import bg from "../../images/gradients/green_gradient_cr.svg";
+import bgMd from '../../images/gradients/green_gradient_md.svg'
 
 const MainDiv = styled.div`
   min-height: 100vh;
@@ -14,6 +16,8 @@ const MainDiv = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 2rem;
+  z-index: 999;
+  position: relative;
 `;
 
 const HeaderDiv = styled.div`
@@ -58,7 +62,6 @@ const RightCol = styled.div`
   align-items: center;
   gap: 2rem;
 
-
   @media (max-width: 750px) {
     width: 100%;
     flex-direction: column;
@@ -67,153 +70,191 @@ const RightCol = styled.div`
 
 const AboutUs = (props) => {
   return (
-    <MainDiv ref={props.aboutRef}>
-      <HeaderDiv>
-        <Typography
-          className="poppins-medum"
-          fontSize={{ xs: '2rem', md: "3rem"}}
-          color="#30DCCA"
-          lineHeight={{xs: '2rem', md: "4rem"}}
-          textAlign={"center"}
-        >
-          Who Are We
-        </Typography>
-        <Typography
-          className="plus-jakarta-sans"
-          fontSize={{ xs: '1rem' , md: "1.3rem"}}
-          color="#ffffff"
-          lineHeight={"150%"}
-          textAlign={"center"}
-          width={{xs: '70%', md: '100%'}}
-          margin={'auto'}
-        >
-          Providing you with the cutting{" "}
-          <Typography component={"span"} color="#30DCCA" className="plus-jakarta-sans"
-          fontSize={{ xs: '.9rem' , md: "1.3rem"}}
-          lineHeight={"150%"}
-          textAlign={"center"}
-          width={{xs: '70%', md: '100%'}}
-          margin={'auto'}>
-            edge solutions
-          </Typography>{" "}
-          that the tech world has.
-        </Typography>
-      </HeaderDiv>
-      <Container>
-        <LeftCol>
-          <Box
-            width={{ xs: "100%", lg: "60%" }}
-            display="flex"
-            flexDirection="column"
-            gap={2}
+    <Box position={"relative"}>
+      <MainDiv ref={props.aboutRef}>
+        <HeaderDiv>
+          <Typography
+            className="poppins-medum"
+            fontSize={{ xs: "2rem", md: "3rem" }}
+            color="#30DCCA"
+            lineHeight={{ xs: "2rem", md: "4rem" }}
+            textAlign={"center"}
           >
+            Who Are We
+          </Typography>
+          <Typography
+            className="plus-jakarta-sans"
+            fontSize={{ xs: "1rem", md: "1.3rem" }}
+            color="#ffffff"
+            lineHeight={"150%"}
+            textAlign={"center"}
+            width={{ xs: "70%", md: "100%" }}
+            margin={"auto"}
+          >
+            Providing you with the cutting{" "}
             <Typography
-              className="poppins-regular"
-              fontSize={"1rem"}
+              component={"span"}
               color="#30DCCA"
-              lineHeight={"1.1rem"}
-              display={{xs:'none', lg: 'block'}}
+              className="plus-jakarta-sans"
+              fontSize={{ xs: ".9rem", md: "1.3rem" }}
+              lineHeight={"150%"}
+              textAlign={"center"}
+              width={{ xs: "70%", md: "100%" }}
+              margin={"auto"}
             >
-              About Us
-            </Typography>
-            <Typography
-              className="poppins-semibold"
-              fontSize={"1.75rem"}
-              color={"#ffffff"}
-              lineHeight={"2.3rem"}
-              display={{xs:'none', lg: 'block'}}
-            >
-              We design brand, digital experience that engage the right
-              customers and As well as right business
-            </Typography>
+              edge solutions
+            </Typography>{" "}
+            that the tech world has.
+          </Typography>
+        </HeaderDiv>
+        <Container>
+          <LeftCol>
             <Box
-              mt={5}
+              width={{ xs: "100%", lg: "60%" }}
               display="flex"
-              flexDirection="row"
-              alignItems="center"
-              gap={5}
-              justifyContent={{xs:'center', md:'flex-start'}}
+              flexDirection="column"
+              gap={2}
             >
-              <Box display="flex" flexDirection={"column"} gap={2} alignItems={'center'}>
-                <CircularProgressWithLabel
-                  value={90}
-                  sx={{ color: "#30DCCA" }}
-                  size={"7rem"}
-                />
-                <Typography
-                  variant="caption"
-                  component="div"
-                  color="#ffffff"
-                  className="poppins-regular"
-                  fontSize={"1rem"}
-                  lineHeight={"1.2rem"}
-                >
-                  Development
-                </Typography>
-              </Box>
-              <Box
-                display="flex"
-                flexDirection={"column"}
-                gap={2}
-                alignItems={"center"}
+              <Typography
+                className="poppins-regular"
+                fontSize={"1rem"}
+                color="#30DCCA"
+                lineHeight={"1.1rem"}
+                display={{ xs: "none", lg: "block" }}
               >
-                <CircularProgressWithLabel
-                  value={75}
-                  sx={{ color: "#30DCCA" }}
-                  size={"7rem"}
-                />
-                <Typography
-                  variant="caption"
-                  component="div"
-                  color="#ffffff"
-                  className="poppins-regular"
-                  fontSize={"1rem"}
-                  lineHeight={"1.2rem"}
+                About Us
+              </Typography>
+              <Typography
+                className="poppins-semibold"
+                fontSize={"1.75rem"}
+                color={"#ffffff"}
+                lineHeight={"2.3rem"}
+                display={{ xs: "none", lg: "block" }}
+              >
+                We design brand, digital experience that engage the right
+                customers and As well as right business
+              </Typography>
+              <Box
+                mt={5}
+                display="flex"
+                flexDirection="row"
+                alignItems="center"
+                gap={5}
+                justifyContent={{ xs: "center", md: "flex-start" }}
+              >
+                <Box
+                  display="flex"
+                  flexDirection={"column"}
+                  gap={2}
+                  alignItems={"center"}
                 >
-                  Marketing
-                </Typography>
+                  <CircularProgressWithLabel
+                    value={90}
+                    sx={{ color: "#30DCCA" }}
+                    size={"7rem"}
+                  />
+                  <Typography
+                    variant="caption"
+                    component="div"
+                    color="#ffffff"
+                    className="poppins-regular"
+                    fontSize={"1rem"}
+                    lineHeight={"1.2rem"}
+                  >
+                    Development
+                  </Typography>
+                </Box>
+                <Box
+                  display="flex"
+                  flexDirection={"column"}
+                  gap={2}
+                  alignItems={"center"}
+                >
+                  <CircularProgressWithLabel
+                    value={75}
+                    sx={{ color: "#30DCCA" }}
+                    size={"7rem"}
+                  />
+                  <Typography
+                    variant="caption"
+                    component="div"
+                    color="#ffffff"
+                    className="poppins-regular"
+                    fontSize={"1rem"}
+                    lineHeight={"1.2rem"}
+                  >
+                    Marketing
+                  </Typography>
+                </Box>
               </Box>
             </Box>
-          </Box>
-        </LeftCol>
-        <RightCol>
-          <Box textAlign="center" width={{xs: '100%', lg: "19rem"}}>
-            <img src={DownloadsImg} width={'100%'} />
-            <Typography
-              color="#A3A3A3"
-              className="poppins-regular"
-              fontSize={"1rem"}
-              lineHeight={"2rem"}
-              textAlign="center"
-              mt={2}
-            >
-              Starting with a 360º app strategy defining and detailing the
-              raison of the app: technology required, investment
-              estimate, timeline, total cost of ownership and the end value, we
-              also dive deep into content strategy, branding strategy and
-              monetization. Result – engaging apps that users actually use.
-            </Typography>
-          </Box>
-          <Box textAlign="center"  width={{xs: '100%', lg: "19rem"}}>
-            <img src={DeliveredImg} width={'100%'} />
-            <Typography
-              color="#A3A3A3"
-              className="poppins-regular"
-              fontSize={"1rem"}
-              lineHeight={"2rem"}
-              textAlign="center"
-              mt={2}
-            >
-              Tech solutions that have helped businesses align their
-              channels/customer interfaces, streamline processes, automate
-              systems to bring in efficiency and effectiveness, simplify
-              communications, elevate customer experiences, embed resources and
-              do so much more.
-            </Typography>
-          </Box>
-        </RightCol>
-      </Container>
-    </MainDiv>
+          </LeftCol>
+          <RightCol>
+            <Box textAlign="center" width={{ xs: "100%", lg: "19rem" }}>
+              <img src={DownloadsImg} width={"100%"} />
+              <Typography
+                color="#A3A3A3"
+                className="poppins-regular"
+                fontSize={"1rem"}
+                lineHeight={"2rem"}
+                textAlign="center"
+                mt={2}
+              >
+                Starting with a 360º app strategy defining and detailing the
+                raison of the app: technology required, investment estimate,
+                timeline, total cost of ownership and the end value, we also
+                dive deep into content strategy, branding strategy and
+                monetization. Result – engaging apps that users actually use.
+              </Typography>
+            </Box>
+            <Box textAlign="center" width={{ xs: "100%", lg: "19rem" }}>
+              <img src={DeliveredImg} width={"100%"} />
+              <Typography
+                color="#A3A3A3"
+                className="poppins-regular"
+                fontSize={"1rem"}
+                lineHeight={"2rem"}
+                textAlign="center"
+                mt={2}
+              >
+                Tech solutions that have helped businesses align their
+                channels/customer interfaces, streamline processes, automate
+                systems to bring in efficiency and effectiveness, simplify
+                communications, elevate customer experiences, embed resources
+                and do so much more.
+              </Typography>
+            </Box>
+          </RightCol>
+        </Container>
+      </MainDiv>
+      <Box
+        display={{ xs: "none", md: "flex" }}
+        position={"absolute"}
+        top={"-310px"}
+        left={"-950px"}
+        zIndex={99}
+      >
+        <img src={bg} />
+      </Box>
+      <Box
+        display={{ xs: "flex", md: "none" }}
+        position={"absolute"}
+        top={"-250px"}
+        left={"0"}
+        zIndex={99}
+      >
+        <img src={bgMd} />
+      </Box>
+      <Box
+        display={{ xs: "flex", md: "none" }}
+        position={"absolute"}
+        top={"450px"}
+        right={"0"}
+        zIndex={99}
+      >
+        <img src={bgMd} />
+      </Box>
+    </Box>
   );
 };
 

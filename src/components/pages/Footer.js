@@ -12,6 +12,7 @@ const MainDiv = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 999;
 
   @media(max-width: 700px){
     background-color: #262626;
@@ -35,13 +36,12 @@ const Footer = (props) => {
           <Typography
             variant="h6"
             sx={{
-              fontFamily: "monospace",
+              fontFamily: "Algerian",
               fontWeight: 700,
               letterSpacing: ".3rem",
               color: "#fff",
               textDecoration: "none",
             }}
-            // textAlign={{xs:'center', md: 'start'}}
           >
             Janus <Color>Softwares</Color>
           </Typography>

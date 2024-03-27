@@ -4,7 +4,6 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
@@ -13,7 +12,6 @@ import MenuItem from "@mui/material/MenuItem";
 import Logo from "../../images/Janus_Logo.png";
 import { Drawer } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
-import HomeSVG from "../../images/Home.svg";
 import styled from "styled-components";
 
 const Image = styled.img`
@@ -22,6 +20,20 @@ const Image = styled.img`
 `;
 
 const Header = (props) => {
+  const [isTop, setIsTop] = React.useState(true);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsTop(scrollTop === 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const pages = [
     { name: "About Us", reference: props.aboutRef },
     { name: "Why Us", reference: props.servicesRef },
@@ -57,7 +69,9 @@ const Header = (props) => {
     <AppBar
       position="fixed"
       sx={{
-        backgroundColor: "#2b2b2b",
+        backgroundColor: isTop ? 'transparent' : '#262626',
+        backdropFilter: isTop ? 'none' : 'blur(10px)',
+        transition: 'background-color 0.3s, backdrop-filter 0.3s',
       }}
     >
       <Container maxWidth="xl">
@@ -67,6 +81,7 @@ const Header = (props) => {
             <Box sx={{ flexGrow: 0}}>
                 <IconButton sx={{ p: 0 }}>
                   <Avatar alt="JS" src={Logo} />
+                  {/* <img src={Logo} width={50} height={50} /> */}
                 </IconButton>
             </Box>
             <Typography
@@ -76,7 +91,7 @@ const Header = (props) => {
               href="/"
               sx={{
                 mr: 2,
-                fontFamily: "monospace",
+                fontFamily: "Algerian",
                 fontWeight: 700,
                 letterSpacing: ".3rem",
                 color: "inherit",
@@ -144,13 +159,13 @@ const Header = (props) => {
                 </Box>
 
                 <Box display='flex' justifyContent='center' alignItems={'center'} flexDirection={'column'} mb={2}>
-                  <Image src={HomeSVG} />
+                  <Image src={Logo} />
                   <Typography 
-                    className="poppins-medium"
                     component='a'
                     href=""
                     noWrap
                     sx={{
+                      fontFamily: 'Algerian',
                       mt: 2,
                       color: "#ffffff",
                       textDecoration: "none",
@@ -174,7 +189,7 @@ const Header = (props) => {
                 key={page.name}
                 onClick={() => {executeScroll(page.reference);}}
                 >
-                  <Typography textAlign="center" className="poppins-regular" color={index === pages.length-1  ? "#30DCCA" : "#ffffff"} fontSize={'14px'}>{page.name}</Typography>
+                  <Typography textAlign="center" className="poppins-regular" color={'#ffffff'} fontSize={'14px'}>{page.name}</Typography>
                 </MenuItem>
               ))}
               </Box>

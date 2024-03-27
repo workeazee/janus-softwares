@@ -4,6 +4,8 @@ import HomeSVG from "../../images/Services.svg";
 import scroll from "../../images/icons/scroll.svg";
 import { Color } from "./Footer";
 import { Box, Typography } from "@mui/material";
+import bg from "../../images/gradients/green_gradient_cr.svg";
+import bgMd from "../../images/gradients/green_gradient_md.svg";
 
 const MainDiv = styled.div`
   min-height: 100vh;
@@ -17,7 +19,7 @@ const MainDiv = styled.div`
 
   @media (max-width: 900px) {
     flex-direction: column-reverse;
-    justify-content: normal;
+    justify-content: center;
     margin-bottom: 2rem;
     margin-top: 0;
   }
@@ -94,7 +96,7 @@ const Home = (props) => {
   };
 
   return (
-    <Box>
+    <Box position={'relative'}>
       <MainDiv ref={props.homeRef}>
         <LeftDiv>
           <HeadingOne className="plus-jakarta-sans">
@@ -120,7 +122,7 @@ const Home = (props) => {
         alignItems={"center"}
         justifyContent={"center"}
         position={"absolute"}
-        bottom={'5%'}
+        bottom={"5%"}
         gap={0.5}
         ml={"auto"}
         mr={"auto"}
@@ -139,6 +141,15 @@ const Home = (props) => {
         >
           Scroll Down
         </Typography>
+      </Box>
+      <Box display={{xs:'none', md:"flex"}} position={"absolute"} top={'-250px'} right={'-840px'} zIndex={99}>
+        <img src={bg} />
+      </Box>
+      <Box display={{xs:'flex', md:"none"}} position={"absolute"} top={'-250px'} right={'-100%'} zIndex={99}>
+        <img src={bgMd} />
+      </Box>
+      <Box display={{xs:'flex', md:"none"}} position={"absolute"} bottom={'-350px'} left={'-100%'} zIndex={99}>
+        <img src={bgMd} />
       </Box>
     </Box>
   );

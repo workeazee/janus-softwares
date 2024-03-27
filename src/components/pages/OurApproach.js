@@ -2,6 +2,7 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import HomeImg from "../../images/About.svg";
 import styled from "styled-components";
+import bgMd from '../../images/gradients/green_gradient_md.svg'
 
 const Img = styled.img`
   height: 550px;
@@ -25,6 +26,8 @@ const OurApproach = (props) => {
       justifyContent={"space-between"}
       my={{ xs: 5, md: 10 }}
       py={5}
+      zIndex={999}
+      position={'relative'}
     >
       <Box
         width={{ xs: "100%", lg: "50%" }}
@@ -77,6 +80,24 @@ const OurApproach = (props) => {
         mt={{ xs: 5, md: 0 }}
       >
         <Img src={HomeImg} />
+      </Box>
+      <Box
+        display={{ xs: "flex", md: "none" }}
+        position={"absolute"}
+        top={"-300px"}
+        left={"-50px"}
+        zIndex={99}
+      >
+        <img src={bgMd} />
+      </Box>
+      <Box
+        display={{ xs: "flex", md: "none" }}
+        position={"absolute"}
+        bottom={"-300px"}
+        right={"-50px"}
+        zIndex={99}
+      >
+        <img src={bgMd} />
       </Box>
     </Box>
   );
