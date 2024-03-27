@@ -2,10 +2,11 @@ import {
   Box,
   Typography,
   TextField,
-  TextareaAutosize,
   Button,
+  styled,
+  Alert,
 } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import bgImg from "../../images/contact_bg.png";
 import phoneImg from "../../images/icons/phone.svg";
 import emailImg from "../../images/icons/email.svg";
@@ -24,6 +25,27 @@ const Label = (props) => {
     </Typography>
   );
 };
+
+const CssTextField = styled(TextField)({
+  "& label.Mui-focused": {
+    color: "#ffffff",
+  },
+  "& .MuiInput-underline:after": {
+    borderBottomColor: "#B2BAC2",
+  },
+  "& .MuiOutlinedInput-root": {
+    color: "#fff",
+    "& fieldset": {
+      borderColor: "#E0E3E7",
+    },
+    "&:hover fieldset": {
+      borderColor: "#ffffff",
+    },
+    "&.Mui-focused fieldset": {
+      borderColor: "#30DCCA",
+    },
+  },
+});
 
 const Container = ({ img, title, desc }) => {
   return (
@@ -59,12 +81,86 @@ const Contact = (props) => {
     phone: "",
     description: "",
   });
+
+  const [alert, setAlert] = useState({
+    success: "",
+    error: "",
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (
+      !form.email.trim() ||
+      !form.fullName.trim() ||
+      !form.description.trim() ||
+      !form.phone.trim()
+    ) {
+      setAlert({
+        success: "",
+        error: "Please fill all the fields before submit",
+      });
+      return;
+    } else {
+      setAlert({
+        success: "",
+        error: "",
+      });
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(form.email)) {
+      setAlert({
+        success: "",
+        error: "Invalid Email",
+      });
+      return;
+    } else {
+      setAlert({
+        success: "",
+        error: "",
+      });
+    }
+    // Validate phone number length
+    // const phoneNumberRegex = /^\d{10}$/;
+    // if (!phoneNumberRegex.test(form.phoneNumber)) {
+    //   setAlert({
+    //     success: "",
+    //     error: "Invalid Phone Number",
+    //   });
+    //   return;
+    // } else {
+    //   setAlert({
+    //     success: "",
+    //     error: "",
+    //   });
+    // }
+
+    setAlert({
+      success:"Email sent successfully",
+      error:''
+    })
+    console.log("Form submitted:", form);
+  };
+
+  const handleClose = () => {
+    setAlert({
+      success:'',
+      error:''
+    })
+  }
+
+  useEffect(() => {
+    handleClose()
+  }, [form])
+
   return (
     <Box
       ref={props.contactRef}
       display="flex"
       flexDirection={{ xs: "column", md: "row" }}
-      alignItems={"center"}
+      alignItems={{xs: "center", md: 'start'}}
       justifyContent={"space-around"}
       sx={{
         backgroundImage: `url(${bgImg})`,
@@ -105,7 +201,7 @@ const Contact = (props) => {
         >
           <Box width={"100%"}>
             <Label text="Full Name" />
-            <TextField
+            <CssTextField
               fullWidth
               variant="outlined"
               type="text"
@@ -120,7 +216,7 @@ const Contact = (props) => {
           </Box>
           <Box width={"100%"}>
             <Label text="Email" />
-            <TextField
+            <CssTextField
               fullWidth
               type="email"
               variant="outlined"
@@ -135,7 +231,7 @@ const Contact = (props) => {
           </Box>
           <Box width={"100%"}>
             <Label text="Phone" />
-            <TextField
+            <CssTextField
               fullWidth
               type="number"
               variant="outlined"
@@ -146,20 +242,26 @@ const Contact = (props) => {
                   phone: e.target.value,
                 }))
               }
+              inputProps={{
+                min: 0,
+                inputMode: "numeric",
+                style: { "-moz-appearance": "textfield" },
+              }}
             />
           </Box>
           <Box width={"100%"}>
             <Label text="Description" />
-            <TextField
+            <CssTextField
               fullWidth
               id="outlined-textarea"
               multiline
+              minRows={6}
               variant="outlined"
-              value={form.email}
+              value={form.description}
               onChange={(e) =>
                 setForm((prevState) => ({
                   ...prevState,
-                  email: e.target.value,
+                  description: e.target.value,
                 }))
               }
             />
@@ -167,6 +269,7 @@ const Contact = (props) => {
 
           <Button
             variant="contained"
+            type="submit"
             sx={{
               bgcolor: "#30DCCA",
               py: 2,
@@ -175,19 +278,37 @@ const Contact = (props) => {
               },
               marginTop: 5,
             }}
+            onClick={(e) => {
+              handleSubmit(e);
+            }}
           >
             Submit
           </Button>
         </form>
+        {!!alert.success && (
+          <Alert severity="success" onClose={handleClose}>
+            {alert.success}
+          </Alert>
+        )}
+        {!!alert.error && (
+          <Alert severity="error" onClose={handleClose}>
+            {alert.error}
+          </Alert>
+        )}
       </Box>
 
-      <Box display={"flex"} flexDirection={"column"} gap={3} mt={{xs: 5, md: 0}}>
+      <Box
+        display={"flex"}
+        flexDirection={"column"}
+        gap={3}
+        mt={{ xs: 5, md: 0 }}
+      >
         <Typography
           className="poppins-bold"
-          fontSize={{ xs: '1.5rem',  md: "3rem"}}
+          fontSize={{ xs: "1.5rem", md: "3rem" }}
           lineHeight={"3rem"}
           color={"#ffffff"}
-          display={{xs: 'none', md: 'block'}}
+          display={{ xs: "none", md: "block" }}
         >
           let’s work together?
         </Typography>
@@ -196,7 +317,7 @@ const Contact = (props) => {
           fontSize={"1rem"}
           lineHeight={"2rem"}
           color={"#ffffff"}
-          display={{xs: 'none', md: 'block'}}
+          display={{ xs: "none", md: "block" }}
         >
           "Let's connect for shared success and endless possibilities. <br />{" "}
           Together, we can create something extraordinary."

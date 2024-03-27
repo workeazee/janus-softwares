@@ -14,7 +14,7 @@ const MainDiv = styled.div`
   justify-content: center;
   z-index: 999;
 
-  @media(max-width: 700px){
+  @media (max-width: 700px) {
     background-color: #262626;
   }
 `;
@@ -27,12 +27,17 @@ const Footer = (props) => {
     <MainDiv ref={props.footerRef}>
       <Box
         display="flex"
-        flexDirection={{xs:'column', md:"row"}}
+        flexDirection={{ xs: "column", md: "row" }}
         alignItems={"center"}
-        justifyContent={{ xs:'center', md:"space-between"}}
-        px={{xs:"10px", md:"4rem"}}
+        justifyContent={{ xs: "center", md: "space-between" }}
+        px={{ xs: "10px", md: "4rem" }}
       >
-        <Box width={{xs:'100%',md:"40%"}} display={"flex"} flexDirection={"column"} gap={2}>
+        <Box
+          width={{ xs: "100%", md: "40%" }}
+          display={"flex"}
+          flexDirection={"column"}
+          gap={2}
+        >
           <Typography
             variant="h6"
             sx={{
@@ -87,13 +92,19 @@ const Footer = (props) => {
             </a>
           </Box>
         </Box>
-        <Box width={{xs:'100%',md:"40%"}} display={"flex"} flexDirection={"column"} gap={2} mt={{xs: 1, md: 0}}>
+        <Box
+          width={{ xs: "100%", md: "40%" }}
+          display={"flex"}
+          flexDirection={"column"}
+          gap={2}
+          mt={{ xs: 1, md: 0 }}
+        >
           <Typography
-           className="plus-jakarta-sans"
-           fontSize={{ xs: "1.5rem", md: "3rem" }}
-           lineHeight={"150%"}
-           color={"#fff"}
-          //  textAlign={{xs:'center', md: 'start'}}
+            className="plus-jakarta-sans"
+            fontSize={{ xs: "1.5rem", md: "3rem" }}
+            lineHeight={"150%"}
+            color={"#fff"}
+            //  textAlign={{xs:'center', md: 'start'}}
           >
             Contact
           </Typography>
@@ -118,29 +129,34 @@ const Footer = (props) => {
             // justifyContent={{xs:'center', md:'start'}}
             gap={3}
           >
-            <a href="tel:+919029050299" target="_blank" rel="noreferrer">
+            <a href="tel:+919029050299" target="_blank" rel="noreferrer" style={{display:'flex', alignItems:'center', gap: '15px', textDecoration:'none'}}>
               <FiPhoneCall className="contact" size={26} color="white" />
+              <Typography
+                className="plus-jakarta-sans"
+                fontSize={{ xs: "1rem", md: "1.5rem" }}
+                lineHeight={"150%"}
+                color={"#fff"}
+              >
+                +91 9029050299
+              </Typography>
             </a>
-            <Typography
-            className="plus-jakarta-sans"
-            fontSize={{ xs: "1rem", md: "1.5rem" }}
-            lineHeight={"150%"}
-            color={"#fff"}
-          >
-            +91 9029050299
-          </Typography>
           </Box>
         </Box>
       </Box>
-      <Box textAlign={'center'} width={'100%'} bgcolor={'#30DCCA'} mt={{xs: 5, md: 10}}>
-          <Typography
-            className="plus-jakarta-sans"
-            fontSize={{ xs: "1rem", md: "1.5rem" }}
-            lineHeight={"150%"}
-            color={"#fff"}
-          >
-            Copyright © 2024 Janus Softwares. All Rights Reserved.
-          </Typography>
+      <Box
+        textAlign={"center"}
+        width={"100%"}
+        bgcolor={"#30DCCA"}
+        mt={{ xs: 5, md: 10 }}
+      >
+        <Typography
+          className="plus-jakarta-sans"
+          fontSize={{ xs: "1rem", md: "1.5rem" }}
+          lineHeight={"150%"}
+          color={"#fff"}
+        >
+          Copyright © 2024 Janus Softwares. All Rights Reserved
+        </Typography>
       </Box>
     </MainDiv>
   );

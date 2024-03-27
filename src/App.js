@@ -10,6 +10,7 @@ import './App.css';
 // import Contact from './components/pages/Contact';
 // import Employess from './components/pages/Employess';
 import { register } from "swiper/element/bundle";
+import TechStacks from './components/pages/TechStack';
 
 register();
 
@@ -62,6 +63,7 @@ function App() {
       />
       <OurApproach ourApproachRef={ourApproachRef} />
       <Solutions solutionsRef={solutionsRef} />
+      <TechStacks />
       <TeamMembers teamMembersRef={teamMembersRef} />
       {/* <Technology 
         techRef={techRef}

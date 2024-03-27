@@ -59,7 +59,10 @@ const Header = (props) => {
   };
 
   const executeScroll = (reference) => {
-    reference.current.scrollIntoView({ behavior: "smooth" });
+    reference.current.scrollIntoView({
+      behavior: "smooth",
+      block:'center'
+    });
     setTimeout(() => {
       handleCloseNavMenu();
     }, 800);
@@ -77,7 +80,7 @@ const Header = (props) => {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
         <Box sx={{display:'flex', fexl:1, flexDirection:'row', alignItems:'center', justifyContent:'space-between', width:'100%'}}>
-          <Box sx={{display: { xs: "none", lg: "flex" } , flexDirection:'row', gap: 2, alignItems:'center', justifyContent:'center'}}>
+          <Box sx={{display: { xs: "none", lg: "flex" } , flexDirection:'row', gap: 2, alignItems:'center', justifyContent:'center', cursor:'pointer'}} onClick={() => {executeScroll(props.homeRef)}}>
             <Box sx={{ flexGrow: 0}}>
                 <IconButton sx={{ p: 0 }}>
                   <Avatar alt="JS" src={Logo} />
@@ -87,8 +90,6 @@ const Header = (props) => {
             <Typography
               variant="h6"
               noWrap
-              component="a"
-              href="/"
               sx={{
                 mr: 2,
                 fontFamily: "Algerian",
@@ -107,7 +108,7 @@ const Header = (props) => {
                 className="poppins-regular"
                 key={page.handleOpenNavMenu}
                 // onClick={handleCloseNavMenu}
-                onClick={() => {executeScroll(page.reference);}}
+                onClick={() => {executeScroll(page.reference)}}
                 sx={{ my: 2, color: index === pages.length-1  ? "#30DCCA" : "white", display: "block", fontSize:16, textTransform: 'none' }}
               >
                 {page.name}

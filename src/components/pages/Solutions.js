@@ -5,7 +5,7 @@ import img from "../../images/solutions.png";
 import bg from "../../images/gradients/green_gradient_cr.svg";
 import bgMd from '../../images/gradients/green_gradient_md.svg'
 
-const Highlighted = styled.span`
+export const Highlighted = styled.span`
   color: #3acbbc;
 `;
 
