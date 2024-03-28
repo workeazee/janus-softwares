@@ -7,12 +7,12 @@ import parthDp from "../../images/parth_jain.jpeg";
 import siddheshDp from "../../images/siddhesh_shinde.jpeg";
 import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded";
 import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
-import souravDp from '../../images/sourav_kumar.jpeg'
+import souravDp from "../../images/sourav_kumar.jpeg";
 
-const Item = ({ img, name, desc }) => {
+const Item = ({ img, name, desc, role }) => {
   return (
     <Box
-      width='100%'
+      width="100%"
       minHeight={{ xs: 500, md: 360 }}
       bgcolor={"#262626"}
       borderRadius={"1rem"}
@@ -28,16 +28,32 @@ const Item = ({ img, name, desc }) => {
         borderRadius={"1rem"}
         py={1}
       >
-        <Avatar src={img} sx={{ width: 80, height: 80}} />
-        <Typography
-          color={"#000229"}
-          className="plus-jakarta-sans"
-          fontSize={"1.5rem"}
-          fontWeight={"bold"}
-          lineHeight={"1.25rem"}
+        <Avatar src={img} sx={{ width: 80, height: 80 }} />
+        <Box
+          display={"flex"}
+          flexDirection={"column"}
+          alignItems={"start"}
+          justifyContent={"center"}
+          gap={1}
         >
-          {name}
-        </Typography>
+          <Typography
+            color={"#000229"}
+            className="plus-jakarta-sans"
+            fontSize={"1.5rem"}
+            fontWeight={"bold"}
+            lineHeight={"1.25rem"}
+          >
+            {name}
+          </Typography>
+          <Typography
+            color={"#000229"}
+            className="plus-jakarta-sans"
+            fontSize={"1rem"}
+            lineHeight={".75rem"}
+          >
+            {role}
+          </Typography>
+        </Box>
       </Box>
       <Box
         display={"flex"}
@@ -47,7 +63,7 @@ const Item = ({ img, name, desc }) => {
         px={3.5}
         py={2}
         flex={1}
-        overflow={'auto'}
+        overflow={"auto"}
       >
         <Typography
           color={"#ffffff"}
@@ -56,10 +72,10 @@ const Item = ({ img, name, desc }) => {
           lineHeight={"1.81rem"}
           textAlign={"start"}
           sx={{
-            overflowWrap: 'break-word',
-            wordBreak: 'break-word',
-            maxHeight: '100%',
-            overflowY: 'auto',
+            overflowWrap: "break-word",
+            wordBreak: "break-word",
+            maxHeight: "100%",
+            overflowY: "auto",
           }}
         >
           “{desc}”
@@ -72,32 +88,38 @@ const Item = ({ img, name, desc }) => {
 const employees = [
   {
     name: "Serjeel Ranjan",
+    role: "Full Stack Developer",
     img: srejeelDp,
     desc: "I'm grateful to have worked with Janus Softwares, a company that trusted my skills and gave me the chance to collaborate with overseas clients. Their confidence has not only boosted my professional growth but also broadened my global perspective. I'm honored to be part of such a forward-thinking team.",
   },
   {
     name: "Shubham Yadav",
+    role: "Python Developer",
     img: subhamDp,
     desc: "During my internship at Janus Software, I acquired practical skills in Python development and data analysis. I collaborated with a supportive team, whose guidance and mentorship greatly enhanced my learning experience. Their insights and assistance were instrumental in my professional growth.",
   },
   {
     name: "Paarth Jain",
+    role: "React Js Developer",
     img: parthDp,
     desc: "It was great working with Janus Softwares. My onboarding experience was really smooth and people here are really helpful. Initially I faced some issues working with the codebase but senior devs guided me right.",
   },
 
   {
     name: "Siddhesh Shinde",
+    role: "Full Stack Developer",
     img: siddheshDp,
     desc: "My time at Janus Softwares yielded a wealth of learnings, fostered by a flexible work environment. Within the realm of Janus Softwares, I found myself honing my focus on delivering quality output for the company, unbound by conventional work hour constraints. Every day at Janus Softwares felt like blossoming, a chance to flourish and contribute.",
   },
   {
     name: "Sourabh",
+    role: "Full Stack Developer",
     img: sourabhDp,
     desc: "It has been a privilege working with Jenus Software.  Jenus consistently operates at the forefront of technology, fostering an environment that values and cultivates individual capabilities. Their unwavering trust in my abilities has propelled my growth, while interactions with peers from diverse backgrounds have enriched my understanding of core technologies and organizational practices.",
   },
   {
     name: "Sourav Kumar",
+    role: "Full Stack Developer",
     img: souravDp,
     desc: "Working as a frontend developer at Janus Softwares during my early career was an invaluable experience. The supportive environment and challenging projects pushed me to grow and learn beyond my expectations. I'm grateful for the opportunity to contribute to such a dynamic team and for the mentorship that helped shape my skills as a developer.",
   },
@@ -114,7 +136,7 @@ const Employess = (props) => {
       gap={{ xs: 1.5, md: 3 }}
       my={{ xs: 5, md: 10 }}
       zIndex={999}
-      position={'relative'}
+      position={"relative"}
     >
       <Typography
         className="poppins-medium"
@@ -185,7 +207,7 @@ const Employess = (props) => {
           navigation-next-el=".custom-next-button"
           navigation-prev-el=".custom-prev-button"
           slides-per-view="3"
-          space-between="10" 
+          space-between="10"
           pagination-clickable="true"
           pagination-dynamic-bullets="true"
           autoplay-delay="2000"
@@ -204,6 +226,7 @@ const Employess = (props) => {
               <Item
                 name={employee.name}
                 img={employee.img}
+                role={employee.role}
                 desc={employee.desc}
               />
             </swiper-slide>
@@ -236,6 +259,7 @@ const Employess = (props) => {
               <Item
                 name={employee.name}
                 img={employee.img}
+                role={employee.role}
                 desc={employee.desc}
               />
             </swiper-slide>

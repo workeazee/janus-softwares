@@ -13,6 +13,7 @@ import Logo from "../../images/Janus_Logo.png";
 import { Drawer } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import styled from "styled-components";
+import useIsOnTop from "../../hooks/useIsOnTop";
 
 const Image = styled.img`
   width: 132px;
@@ -20,25 +21,14 @@ const Image = styled.img`
 `;
 
 const Header = (props) => {
-  const [isTop, setIsTop] = React.useState(true);
-
-  React.useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      setIsTop(scrollTop === 0);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  const isTop = useIsOnTop()
 
   const pages = [
     { name: "About Us", reference: props.aboutRef },
     { name: "Why Us", reference: props.servicesRef },
     { name: "Our Approach", reference: props.ourApproachRef },
     { name: "Solutions", reference: props.solutionsRef },
+    { name: "Stacks", reference: props.techStackRef },
     { name: "Members", reference: props.teamMembersRef },
     // { name: "Case Studies", reference: props.aboutRef },
     { name: "Testimonials", reference: props.employeeRef },
@@ -59,9 +49,14 @@ const Header = (props) => {
   };
 
   const executeScroll = (reference) => {
-    reference.current.scrollIntoView({
+    const appbarHeight = document.querySelector('header').offsetHeight + 10;
+    const element = reference.current;
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.scrollY - appbarHeight;
+
+    window.scrollTo({
+      top: offsetPosition,
       behavior: "smooth",
-      block:'center'
     });
     setTimeout(() => {
       handleCloseNavMenu();

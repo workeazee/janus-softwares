@@ -112,7 +112,7 @@ const TeamMembers = (props) => {
         display={{ xs: "none", md: "flex" }}
         position={"absolute"}
         top={"-350px"}
-        right={"-940px"}
+        left={"-940px"}
         zIndex={99}
       >
         <img src={bg} />
