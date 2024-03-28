@@ -131,7 +131,9 @@ const Contact = (props) => {
       });
     }
     // Validate phone number length
-    if (form.phone.length < 10) {
+    const isValidPhoneNumber = /^[6-9]\d{9}$/.test(form.phone);
+  
+    if (!isValidPhoneNumber) {
       setAlert({
         success: "",
         error: "Invalid Phone Number",
@@ -277,7 +279,7 @@ const Contact = (props) => {
             <Label text="Phone" />
             <CssTextField
               fullWidth
-              type="number"
+              type="text"
               variant="outlined"
               value={form.phone}
               onChange={(e) =>
