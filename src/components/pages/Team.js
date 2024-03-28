@@ -50,16 +50,16 @@ const TeamMembers = (props) => {
       >
         <Typography
           className="poppins-medium"
-          fontSize={{ xs: "1.75rem", md: "3rem" }}
-          lineHeight={"108%"}
+          fontSize={{ xs: "2rem", md: "2.6rem" }}
+          lineHeight={{ xs: "2rem", md: "2.6rem" }}
           color={"#30DCCA"}
         >
           Team Members
         </Typography>
         <Typography
           className="plus-jakarta-sans"
-          fontSize={{ xs: "1rem", md: "1.5rem" }}
-          lineHeight={"150%"}
+          fontSize={{ xs: "1rem", md: "1.2rem" }}
+          lineHeight={{ xs: "1.2rem", md: "1.4rem" }}
           color={"#fff"}
           textAlign={"center"}
         >
@@ -90,7 +90,8 @@ const TeamMembers = (props) => {
               <Typography
                 textAlign={"center"}
                 className="poppins-regular"
-                fontSize={"1.25rem"}
+                fontSize={{ xs: "1rem", md: "1.2rem" }}
+                lineHeight={{ xs: "1.2rem", md: "1.4rem" }}
                 color={"#fff"}
               >
                 {member.name}
@@ -98,8 +99,9 @@ const TeamMembers = (props) => {
               <Typography
                 textAlign={"center"}
                 className="poppins-regular"
-                fontSize={"1rem"}
-                color={"#fff"}
+                fontSize={{ xs: "1rem", md: "1.2rem" }}
+                lineHeight={{ xs: "1.2rem", md: "1.4rem" }}
+                color={"#30DCCA"}
               >
                 {member.role}
               </Typography>

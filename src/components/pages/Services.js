@@ -62,8 +62,8 @@ const Services = (props) => {
       >
         <Typography
           className="poppins-medium"
-          fontSize={"3rem"}
-          lineHeight={"4.75rem"}
+          fontSize={{ xs: "2rem", md: "2.6rem" }}
+  lineHeight={{ xs: "2rem", md: "2.6rem" }}
           color={"#30DCCA"}
           textAlign={{ xs: "center", lg: "start" }}
         >
@@ -71,10 +71,10 @@ const Services = (props) => {
         </Typography>
         <Typography
           className="plus-jakarta-sans"
-          fontSize={"1rem"}
-          lineHeight={"1.5rem"}
+          fontSize={{ xs: "1rem", md: "1.2rem" }}
+          lineHeight={{ xs: "1.2rem", md: "1.4rem" }}
           color={"#fff"}
-          width={{ xs: "100%", md: "65%" }}
+          width={{ xs: "100%", md: "80%" }}
           textAlign={{ xs: "center", lg: "start" }}
         >
           Stay focused and motivated with visually appealing user interface and

@@ -68,8 +68,8 @@ const Item = ({ img, name, desc, role }) => {
         <Typography
           color={"#ffffff"}
           className="plus-jakarta-sans"
-          fontSize={"1.125rem"}
-          lineHeight={"1.81rem"}
+          fontSize={{ xs: "1rem", md: "1.2rem" }}
+          lineHeight={{ xs: "1.2rem", md: "1.4rem" }}
           textAlign={"start"}
           sx={{
             overflowWrap: "break-word",
@@ -115,7 +115,7 @@ const employees = [
     name: "Sourabh",
     role: "Full Stack Developer",
     img: sourabhDp,
-    desc: "It has been a privilege working with Jenus Software.  Jenus consistently operates at the forefront of technology, fostering an environment that values and cultivates individual capabilities. Their unwavering trust in my abilities has propelled my growth, while interactions with peers from diverse backgrounds have enriched my understanding of core technologies and organizational practices.",
+    desc: "It has been a privilege working with Janus Software.  Janus consistently operates at the forefront of technology, fostering an environment that values and cultivates individual capabilities. Their unwavering trust in my abilities has propelled my growth, while interactions with peers from diverse backgrounds have enriched my understanding of core technologies and organizational practices.",
   },
   {
     name: "Sourav Kumar",
@@ -140,8 +140,8 @@ const Employess = (props) => {
     >
       <Typography
         className="poppins-medium"
-        fontSize={{ xs: "1.75rem", md: "3rem" }}
-        lineHeight={"108%"}
+        fontSize={{ xs: "2rem", md: "2.6rem" }}
+        lineHeight={{ xs: "2rem", md: "2.6rem" }}
         color={"#30DCCA"}
       >
         Employee Testimonials
@@ -155,8 +155,8 @@ const Employess = (props) => {
       >
         <Typography
           className="plus-jakarta-sans"
-          fontSize={{ xs: "1rem", md: "1.5rem" }}
-          lineHeight={"150%"}
+          fontSize={{ xs: "1rem", md: "1.2rem" }}
+          lineHeight={{ xs: "1.2rem", md: "1.4rem" }}
           color={"#fff"}
           textAlign={"center"}
           flex={1}
@@ -164,8 +164,8 @@ const Employess = (props) => {
           Discover What Our Team Has to Say About Their Experience Working With
           Us 💼💬
         </Typography>
-
-        <Box
+      </Box>
+      <Box
           display={{ xs: "none", md: "flex" }}
           flexDirection={"row"}
           alignItems={"center"}
@@ -175,8 +175,8 @@ const Employess = (props) => {
         >
           <Box
             className="custom-prev-button"
-            width={55}
-            height={55}
+            width={40}
+            height={40}
             bgcolor={"#30DCCA"}
             borderRadius={"50%"}
             textAlign={"center"}
@@ -188,8 +188,8 @@ const Employess = (props) => {
           </Box>
           <Box
             className="custom-next-button"
-            width={55}
-            height={55}
+            width={40}
+            height={40}
             bgcolor={"#30DCCA"}
             borderRadius={"50%"}
             textAlign={"center"}
@@ -200,7 +200,6 @@ const Employess = (props) => {
             <ArrowForwardRoundedIcon sx={{ color: "#ffffff" }} />
           </Box>
         </Box>
-      </Box>
 
       <Box width={"100vw"} display={{ xs: "none", md: "block" }}>
         <swiper-container
