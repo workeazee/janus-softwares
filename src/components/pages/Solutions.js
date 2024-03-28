@@ -10,10 +10,10 @@ export const Highlighted = styled.span`
 `;
 
 const Img = styled.img`
-  width: 950px;
-  height: 595px;
+  width: 900px;
+  height: 500px;
 
-  @media (max-width: 750px) {
+  @media (max-width: 768px) {
     width: 350px;
     height: 225px;
   }
@@ -34,16 +34,16 @@ const Solutions = (props) => {
       >
         <Typography
           className="poppins-medium"
-          fontSize={{ xs: "1.75rem", md: "3rem" }}
-          lineHeight={"108%"}
+          fontSize={{ xs: "2rem", md: "2.6rem" }}
+          lineHeight={{ xs: "2rem", md: "2.6rem" }}
           color={"#30DCCA"}
         >
           Solutions That We Provide
         </Typography>
         <Typography
           className="plus-jakarta-sans"
-          fontSize={{ xs: "1rem", md: "1.5rem" }}
-          lineHeight={"150%"}
+          fontSize={{ xs: "1rem", md: "1.2rem" }}
+          lineHeight={{ xs: "1.2rem", md: "1.4rem" }}
           color={"#fff"}
           width={{ xs: "100%", md: "50%" }}
           textAlign={"center"}

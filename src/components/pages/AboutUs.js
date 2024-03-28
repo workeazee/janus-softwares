@@ -9,7 +9,7 @@ import bg from "../../images/gradients/green_gradient_cr.svg";
 import bgMd from '../../images/gradients/green_gradient_md.svg'
 
 const MainDiv = styled.div`
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -35,7 +35,7 @@ const Container = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
 
   @media (max-width: 750px) {
     flex-direction: column;
@@ -75,34 +75,34 @@ const AboutUs = (props) => {
         <HeaderDiv>
           <Typography
             className="poppins-medum"
-            fontSize={{ xs: "2rem", md: "3rem" }}
+            fontSize={{ xs: "2rem", md: "2.6rem" }}
             color="#30DCCA"
-            lineHeight={{ xs: "2rem", md: "4rem" }}
+            lineHeight={{ xs: "2rem", md: "2.6rem" }}
             textAlign={"center"}
           >
             Who Are We
           </Typography>
           <Typography
             className="plus-jakarta-sans"
-            fontSize={{ xs: "1rem", md: "1.3rem" }}
+            fontSize={{ xs: "1rem", md: "1.2rem" }}
             color="#ffffff"
-            lineHeight={"150%"}
+            lineHeight={{ xs: "1.2rem", md: "1.4rem" }}
             textAlign={"center"}
             width={{ xs: "70%", md: "100%" }}
             margin={"auto"}
           >
-            Providing you with the cutting{" "}
+            Providing you with the{" "}
             <Typography
               component={"span"}
               color="#30DCCA"
               className="plus-jakarta-sans"
-              fontSize={{ xs: ".9rem", md: "1.3rem" }}
+              fontSize={{ xs: "1rem", md: "1.2rem" }}
               lineHeight={"150%"}
               textAlign={"center"}
               width={{ xs: "70%", md: "100%" }}
               margin={"auto"}
             >
-              edge solutions
+              cutting edge solutions
             </Typography>{" "}
             that the tech world has.
           </Typography>
@@ -117,22 +117,22 @@ const AboutUs = (props) => {
             >
               <Typography
                 className="poppins-regular"
-                fontSize={"1rem"}
+                fontSize={{ xs: "2rem", md: "2.6rem" }}
                 color="#30DCCA"
-                lineHeight={"1.1rem"}
+                lineHeight={{ xs: "2rem", md: "2.6rem" }}
                 display={{ xs: "none", lg: "block" }}
               >
                 About Us
               </Typography>
               <Typography
                 className="poppins-semibold"
-                fontSize={"1.75rem"}
+                fontSize={{ xs: "1rem", md: "1.2rem" }}
                 color={"#ffffff"}
-                lineHeight={"2.3rem"}
+                lineHeight={{ xs: "1.2rem", md: "1.4rem" }}
                 display={{ xs: "none", lg: "block" }}
               >
                 We design brand, digital experience that engage the right
-                customers and As well as right business
+                customers as well as the right business
               </Typography>
               <Box
                 mt={5}
@@ -196,7 +196,7 @@ const AboutUs = (props) => {
                 color="#A3A3A3"
                 className="poppins-regular"
                 fontSize={"1rem"}
-                lineHeight={"2rem"}
+                lineHeight={"1.6rem"}
                 textAlign="center"
                 mt={2}
               >
@@ -213,7 +213,7 @@ const AboutUs = (props) => {
                 color="#A3A3A3"
                 className="poppins-regular"
                 fontSize={"1rem"}
-                lineHeight={"2rem"}
+                lineHeight={"1.6rem"}
                 textAlign="center"
                 mt={2}
               >

@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkjanus_softwares_v2=self.webpackChunkjanus_softwares_v2||[]).push([[541],{8541:function(s,a,e){e(2791);a.Z=e.p+"static/media/Home.a99078cdcff306e743608afa075d93c5.svg"}}]);
-//# sourceMappingURL=541.9d2febee.chunk.js.map

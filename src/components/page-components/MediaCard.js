@@ -18,7 +18,7 @@ const MediaCard = (props) => {
       width: "28%",
       height: "12vh",
     },
-    "@media (max-width: 650px)": {
+    "@media (max-width: 768px)": {
       width: "45%",
       height: "17vh",
     }

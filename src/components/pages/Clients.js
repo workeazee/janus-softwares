@@ -10,7 +10,7 @@ const Div = styled.div`
     justify-content: center;
     background-color: #262626;
 
-    @media (max-width: 650px) {
+    @media (max-width: 768px) {
         height: 8rem;
     }
 `
