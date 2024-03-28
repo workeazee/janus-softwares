@@ -5,12 +5,14 @@ import {
   Button,
   styled,
   Alert,
+  Snackbar,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import bgImg from "../../images/contact_bg.png";
 import phoneImg from "../../images/icons/phone.svg";
 import emailImg from "../../images/icons/email.svg";
 import locationImg from "../../images/icons/location.svg";
+import emailjs from "@emailjs/browser";
 
 const Label = (props) => {
   return (
@@ -75,12 +77,18 @@ const Container = ({ img, title, desc }) => {
 };
 
 const Contact = (props) => {
+  const serviceId = process.env.REACT_APP_SERVICE_ID;
+  const publicKey = process.env.REACT_APP_PUBLIC_KEY;
+  const templateId = process.env.REACT_APP_TEMPLATE_ID;
+
   const [form, setForm] = useState({
     fullName: "",
     email: "",
     phone: "",
     description: "",
   });
+
+  const [submitting, setSubmitting] = useState(false)
 
   const [alert, setAlert] = useState({
     success: "",
@@ -123,44 +131,77 @@ const Contact = (props) => {
       });
     }
     // Validate phone number length
-    // const phoneNumberRegex = /^\d{10}$/;
-    // if (!phoneNumberRegex.test(form.phoneNumber)) {
-    //   setAlert({
-    //     success: "",
-    //     error: "Invalid Phone Number",
-    //   });
-    //   return;
-    // } else {
-    //   setAlert({
-    //     success: "",
-    //     error: "",
-    //   });
-    // }
+    if (form.phone.length < 10) {
+      setAlert({
+        success: "",
+        error: "Invalid Phone Number",
+      });
+      return;
+    } else {
+      setAlert({
+        success: "",
+        error: "",
+      });
+    }
 
     setAlert({
-      success:"Email sent successfully",
-      error:''
-    })
-    console.log("Form submitted:", form);
+      success: "Email sent successfully",
+      error: "",
+    });
+    const templateParams = {
+      fullName: form.fullName,
+      phone: form.phone,
+      email: form.email,
+      description: form.description,
+    };
+
+    setSubmitting(true)
+    emailjs
+      .send(serviceId, templateId, templateParams, {
+        publicKey,
+      })
+      .then(
+        () => {
+          setForm({
+            phone: "",
+            email: "",
+            description: "",
+            fullName: "",
+          });
+          setAlert({
+            success: "Email sent successfully!",
+            error: "",
+          });
+        },
+        (error) => {
+          console.log("FAILED...", error);
+          setAlert({
+            success: "",
+            error: "Something went wrong! Please try again later.",
+          });
+        }
+      ).finally(() => {
+        setSubmitting(false)
+      });
   };
 
   const handleClose = () => {
     setAlert({
-      success:'',
-      error:''
-    })
-  }
+      success: "",
+      error: "",
+    });
+  };
 
   useEffect(() => {
-    handleClose()
-  }, [form])
+    handleClose();
+  }, [form]);
 
   return (
     <Box
       ref={props.contactRef}
       display="flex"
       flexDirection={{ xs: "column", md: "row" }}
-      alignItems={{xs: "center", md: 'start'}}
+      alignItems={{ xs: "center", md: "start" }}
       justifyContent={"space-around"}
       sx={{
         backgroundImage: `url(${bgImg})`,
@@ -197,6 +238,9 @@ const Contact = (props) => {
             display: "flex",
             flexDirection: "column",
             gap: 10,
+          }}
+          onSubmit={(e) => {
+            handleSubmit(e);
           }}
         >
           <Box width={"100%"}>
@@ -276,25 +320,19 @@ const Contact = (props) => {
               "&:hover": {
                 bgcolor: "#30DCCA",
               },
+              "&:disabled": {
+                bgcolor: "#30DCCA",
+                opacity: 0.5, 
+                cursor: "not-allowed",
+                color:'#fff'
+              },
               marginTop: 5,
             }}
-            onClick={(e) => {
-              handleSubmit(e);
-            }}
+            disabled={submitting}
           >
-            Submit
+            {submitting ? 'Submitting...' : 'Submit'}
           </Button>
         </form>
-        {!!alert.success && (
-          <Alert severity="success" onClose={handleClose}>
-            {alert.success}
-          </Alert>
-        )}
-        {!!alert.error && (
-          <Alert severity="error" onClose={handleClose}>
-            {alert.error}
-          </Alert>
-        )}
       </Box>
 
       <Box
@@ -339,6 +377,19 @@ const Contact = (props) => {
           desc="104/105, A Wing, Manas Residency, Thane(W), Maharashtra"
         />
       </Box>
+      <Snackbar
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        open={!!alert.success || !!alert.error}
+        autoHideDuration={5000}
+        onClose={handleClose}
+      >
+        <Alert
+          severity={alert.success ? "success" : "error"}
+          onClose={handleClose}
+        >
+          {alert.success || alert.error}
+        </Alert>
+      </Snackbar>
     </Box>
   );
 };
