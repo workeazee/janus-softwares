@@ -49,7 +49,7 @@ const Header = (props) => {
   };
 
   const executeScroll = (reference) => {
-    const appbarHeight = document.querySelector('header').offsetHeight + 10;
+    const appbarHeight = document.querySelector('header').offsetHeight;
     const element = reference.current;
     const elementPosition = element.getBoundingClientRect().top;
     const offsetPosition = elementPosition + window.scrollY - appbarHeight;
@@ -122,7 +122,7 @@ const Header = (props) => {
               mr: 2,
               display: { xs: "flex", lg: "none" },
               flexGrow: 1,
-              fontFamily: "monospace",
+              fontFamily: "Algerian",
               fontWeight: 700,
               letterSpacing: ".3rem",
               color: "inherit",

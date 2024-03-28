@@ -6,7 +6,7 @@ const useIsOnTop = () => {
     React.useEffect(() => {
       const handleScroll = () => {
         const scrollTop = window.scrollY;
-        setIsTop(scrollTop <= 150);
+        setIsTop(scrollTop <= 20);
       };
   
       window.addEventListener('scroll', handleScroll);
