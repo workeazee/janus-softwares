@@ -107,7 +107,7 @@ const TechStacks = (props) => {
   return (
     <Box position={"relative"}>
       <Box
-        ref={props.solutionsRef}
+        ref={props.techStackRef}
         display="flex"
         flexDirection={"column"}
         alignItems={"center"}
