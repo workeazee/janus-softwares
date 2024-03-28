@@ -9,7 +9,7 @@ import bg from "../../images/gradients/green_gradient_cr.svg";
 import bgMd from '../../images/gradients/green_gradient_md.svg'
 
 const MainDiv = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
