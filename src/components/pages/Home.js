@@ -34,7 +34,7 @@ const LeftDiv = styled.div`
   padding-left: 4rem;
   z-index: 999;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1024px) {
     width: 100%;
     padding: 0;
     justify-content: normal;
@@ -50,7 +50,7 @@ const RightDiv = styled.div`
   padding-right: 4rem;
   z-index: 999;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1024px) {
     width: 100%;
     padding-right: 0;
     padding-top: 2rem;
@@ -60,8 +60,8 @@ const RightDiv = styled.div`
 `;
 const Image = styled.img`
   width: 32rem;
-  height: 31rem;
-  @media (max-width: 1200px) {
+  height: 24rem;
+  @media (max-width: 1024px) {
     width: 100%;
   }
 `;
@@ -69,10 +69,10 @@ const HeadingOne = styled.h1`
   color: #fff;
   margin: 0;
   line-height: 108%;
-  font-size: 3rem;
+  font-size: 2.6rem;
   font-weight: bold;
 
-  @media (max-width: 650px) {
+  @media (max-width: 768px) {
     font-size: 1rem;
     text-align: center;
   }
@@ -81,9 +81,9 @@ const HeadingTwo = styled.h2`
   color: #fff;
   line-height: 150.8%;
   font-weigt: 300;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 
-  @media (max-width: 650px) {
+  @media (max-width: 768px) {
     font-size: 1rem;
     width: 100%;
     text-align: center;

@@ -29,8 +29,8 @@ const Footer = (props) => {
         display="flex"
         flexDirection={{ xs: "column", md: "row" }}
         alignItems={"center"}
-        justifyContent={{ xs: "center", md: "space-between" }}
-        px={{ xs: "10px", md: "4rem" }}
+        justifyContent={{ xs: "center", md: "space-evenly" }}
+        padding={"10px"}
       >
         <Box
           width={{ xs: "100%", md: "40%" }}
@@ -39,7 +39,8 @@ const Footer = (props) => {
           gap={2}
         >
           <Typography
-            variant="h6"
+            fontSize={{ xs: "2rem", md: "2.6rem" }}
+            lineHeight={{ xs: "2rem", md: "2.6rem" }}
             sx={{
               fontFamily: "Algerian",
               fontWeight: 700,
@@ -52,8 +53,8 @@ const Footer = (props) => {
           </Typography>
           <Typography
             className="plus-jakarta-sans"
-            fontSize={{ xs: "1rem", md: "1.5rem" }}
-            lineHeight={"150%"}
+            fontSize={{ xs: "1rem", md: "1.2rem" }}
+            lineHeight={{ xs: "1.2rem", md: "1.4rem" }}
             color={"#fff"}
             // textAlign={{xs:'center', md: 'start'}}
           >
@@ -101,8 +102,8 @@ const Footer = (props) => {
         >
           <Typography
             className="plus-jakarta-sans"
-            fontSize={{ xs: "1.5rem", md: "3rem" }}
-            lineHeight={"150%"}
+            fontSize={{ xs: "2rem", md: "2.6rem" }}
+            lineHeight={{ xs: "2rem", md: "2.6rem" }}
             color={"#fff"}
             //  textAlign={{xs:'center', md: 'start'}}
           >
@@ -110,8 +111,8 @@ const Footer = (props) => {
           </Typography>
           <Typography
             className="plus-jakarta-sans"
-            fontSize={{ xs: "1rem", md: "1.5rem" }}
-            lineHeight={"150%"}
+            fontSize={{ xs: "1rem", md: "1.2rem" }}
+            lineHeight={{ xs: "1.2rem", md: "1.4rem" }}
             color={"#fff"}
             // textAlign={{xs:'center', md: 'start'}}
           >
@@ -129,12 +130,12 @@ const Footer = (props) => {
             // justifyContent={{xs:'center', md:'start'}}
             gap={3}
           >
-            <a href="tel:+919029050299" target="_blank" rel="noreferrer" style={{display:'flex', alignItems:'center', gap: '15px', textDecoration:'none'}}>
+            <a href="tel:+919029050299" target="_blank" rel="noreferrer" style={{display:'flex', alignItems:'center', gap: '15px', textDecoration:'none', }}>
               <FiPhoneCall className="contact" size={26} color="white" />
               <Typography
                 className="plus-jakarta-sans"
-                fontSize={{ xs: "1rem", md: "1.5rem" }}
-                lineHeight={"150%"}
+                fontSize={{ xs: "1rem", md: "1.2rem" }}
+                lineHeight={{ xs: "1.2rem", md: "1.4rem" }}
                 color={"#fff"}
               >
                 +91 9029050299
@@ -151,9 +152,10 @@ const Footer = (props) => {
       >
         <Typography
           className="plus-jakarta-sans"
-          fontSize={{ xs: "1rem", md: "1.5rem" }}
-          lineHeight={"150%"}
+          fontSize={{ xs: "1rem", md: "1.2rem" }}
+          lineHeight={{ xs: "1.2rem", md: "1.4rem" }}
           color={"#fff"}
+          padding={"0.4rem 0"}
         >
           Copyright © 2024 Janus Softwares. All Rights Reserved
         </Typography>

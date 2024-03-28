@@ -95,7 +95,7 @@ const skills = [
 ];
 
 const TechStacks = (props) => {
-    const chunkSize = 6; 
+    const chunkSize = 8; 
 
   const chunkArray = (arr, size) =>
     Array.from({ length: Math.ceil(arr.length / size) }, (_, i) =>
@@ -120,16 +120,16 @@ const TechStacks = (props) => {
       >
         <Typography
           className="poppins-medium"
-          fontSize={{ xs: "1.75rem", md: "3rem" }}
-          lineHeight={"108%"}
+          fontSize={{ xs: "2rem", md: "2.6rem" }}
+          lineHeight={{ xs: "2rem", md: "2.6rem" }}
           color={"#30DCCA"}
         >
           Our Technology Stack
         </Typography>
         <Typography
           className="plus-jakarta-sans"
-          fontSize={{ xs: "1rem", md: "1.5rem" }}
-          lineHeight={"150%"}
+          fontSize={{ xs: "1rem", md: "1.2rem" }}
+          lineHeight={{ xs: "1.2rem", md: "1.4rem" }}
           color={"#fff"}
           width={{ xs: "100%", md: "50%" }}
           textAlign={"center"}
@@ -143,6 +143,7 @@ const TechStacks = (props) => {
           flexDirection={"column"}
           alignItems={"center"}
           justifyContent={"center"}
+          width={"100%"}
         >
           {skillChunks.map((chunk, index) => (
             <Box
@@ -159,10 +160,10 @@ const TechStacks = (props) => {
                   <img src={skill.img} alt={skill.name} />
                   <Typography
                     className="plus-jakarta-sans"
-                    fontSize={{ xs: "1rem", md: "1.5rem" }}
-                    lineHeight={"150%"}
+                    fontSize={{ xs: "1rem", md: "1.2rem" }}
+                    lineHeight={{ xs: "1.2rem", md: "1.4rem" }}
                     color={"#fff"}
-                    width={{ xs: "100%", md: "50%" }}
+                    width={{ xs: "100%", md: "100%" }}
                     textAlign={"center"}
                   >
                     {skill.name}

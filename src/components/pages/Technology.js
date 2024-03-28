@@ -16,7 +16,7 @@ const MainDiv = styled.div`
     margin-top: 3rem;
     height: auto;
   }
-  @media (max-width: 650px) {
+  @media (max-width: 768px) {
     align-items: flex-start;
     height: 160vh;
   }
@@ -28,10 +28,10 @@ const MainHeading = styled.h1`
   font-family: "Lora", sans-serif;
   margin-bottom: 1rem;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1024px) {
     font-size: 3rem;
   }
-  @media (max-width: 650px) {
+  @media (max-width: 768px) {
     font-size: 1.5rem;
   }
 `;
@@ -59,7 +59,7 @@ const Paragraph = styled.p`
   @media (max-width: 900px) {
     font-size: 1.6rem;
   }
-  @media (max-width: 650px) {
+  @media (max-width: 768px) {
     font-size: 1rem;
   }
 `;

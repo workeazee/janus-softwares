@@ -227,9 +227,9 @@ const Contact = (props) => {
       >
         <Typography
           className="poppins-medium"
-          fontSize={{ xs: "1.25rem", md: "1.75rem" }}
-          lineHeight={"108%"}
-          color={"#30DCCA"}
+          fontSize={{ xs: "1rem", md: "1.2rem" }}
+          lineHeight={{ xs: "1.2rem", md: "1.4rem" }}
+            color={"#30DCCA"}
         >
           Want To Disscuss About A Project?
         </Typography>
@@ -345,17 +345,17 @@ const Contact = (props) => {
       >
         <Typography
           className="poppins-bold"
-          fontSize={{ xs: "1.5rem", md: "3rem" }}
-          lineHeight={"3rem"}
+          fontSize={{ xs: "2rem", md: "2.6rem" }}
+          lineHeight={{ xs: "2rem", md: "2.6rem" }}
           color={"#ffffff"}
           display={{ xs: "none", md: "block" }}
         >
-          let’s work together?
+          Let’s work together?
         </Typography>
         <Typography
           className="poppins-regular"
-          fontSize={"1rem"}
-          lineHeight={"2rem"}
+          fontSize={{ xs: "1rem", md: "1.2rem" }}
+          lineHeight={{ xs: "1.2rem", md: "1.4rem" }}
           color={"#ffffff"}
           display={{ xs: "none", md: "block" }}
         >
@@ -365,12 +365,12 @@ const Contact = (props) => {
 
         <Container
           img={phoneImg}
-          title={"Have any question?"}
-          desc="Free +91 9029050299"
+          title={"Have any questions?"}
+          desc="Call on +91 9029050299"
         />
         <Container
           img={emailImg}
-          title={"Send email"}
+          title={"Send us an email"}
           desc="janus.softwares@gmail.com"
         />
         <Container

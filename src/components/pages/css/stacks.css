@@ -1,6 +1,6 @@
 
 .rows {
-    margin: 30px;
+    margin: 15px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -9,8 +9,9 @@
 }
 
 .rows img {
-    width: 150px;
-    height: 150px;
+    object-fit: contain;
+    width: 100px;
+    height: 100px;
     box-sizing: border-box;
     border: 5px white solid;
     border-radius: 50%;
@@ -41,7 +42,7 @@
     }
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:768px) {
     .rows img {
         width: 100px;
         height: 100px;
