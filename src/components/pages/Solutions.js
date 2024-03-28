@@ -37,6 +37,7 @@ const Solutions = (props) => {
           fontSize={{ xs: "2rem", md: "2.6rem" }}
           lineHeight={{ xs: "2rem", md: "2.6rem" }}
           color={"#30DCCA"}
+          textAlign={'center'}
         >
           Solutions That We Provide
         </Typography>

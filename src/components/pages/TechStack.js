@@ -111,7 +111,7 @@ const TechStacks = (props) => {
         display="flex"
         flexDirection={"column"}
         alignItems={"center"}
-        justifyContent={"end"}
+        justifyContent={"center"}
         gap={{ xs: 1.25, md: 3 }}
         zIndex={999}
         position={"relative"}
