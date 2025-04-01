@@ -15,7 +15,7 @@ const Footer = React.lazy(() => import("./components/pages/Footer"));
 const Services = React.lazy(() => import("./components/pages/Services"));
 const OurApproach = React.lazy(() => import("./components/pages/OurApproach"));
 const Solutions = React.lazy(() => import("./components/pages/Solutions"));
-const TeamMembers = React.lazy(() => import("./components/pages/Team"));
+// const TeamMembers = React.lazy(() => import("./components/pages/Team"));
 const Contact = React.lazy(() => import("./components/pages/Contact"));
 const Employess = React.lazy(() => import("./components/pages/Employess"));
 
@@ -28,7 +28,7 @@ function App() {
   const ourApproachRef = useRef();
   const solutionsRef = useRef();
   const techStackRef = useRef();
-  const teamMembersRef = useRef();
+  // const teamMembersRef = useRef();
   const contactRef = useRef();
   const footerRef = useRef();
   const employeeRef = useRef();
@@ -41,7 +41,7 @@ function App() {
         servicesRef={servicesRef}
         ourApproachRef={ourApproachRef}
         solutionsRef={solutionsRef}
-        teamMembersRef={teamMembersRef}
+        // teamMembersRef={teamMembersRef}
         contactRef={contactRef}
         footerRef={footerRef}
         employeeRef={employeeRef}
@@ -54,7 +54,7 @@ function App() {
       <OurApproach ourApproachRef={ourApproachRef} />
       <Solutions solutionsRef={solutionsRef} />
       <TechStacks techStackRef={techStackRef} />
-      <TeamMembers teamMembersRef={teamMembersRef} />
+      { /* <TeamMembers teamMembersRef={teamMembersRef} /> */}
       {/* <Technology 
         techRef={techRef}
       /> */}

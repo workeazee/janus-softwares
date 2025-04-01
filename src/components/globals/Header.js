@@ -29,7 +29,7 @@ const Header = (props) => {
     { name: "Our Approach", reference: props.ourApproachRef },
     { name: "Solutions", reference: props.solutionsRef },
     { name: "Stacks", reference: props.techStackRef },
-    { name: "Members", reference: props.teamMembersRef },
+    // { name: "Members", reference: props.teamMembersRef },
     // { name: "Case Studies", reference: props.aboutRef },
     { name: "Testimonials", reference: props.employeeRef },
     { name: "Contact Us", reference: props.contactRef },
