@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Anurag from "../../images/Anurag.jpg";
 import Anmol from "../../images/Anmol.jpg";
 import bg from "../../images/gradients/green_gradient_cr.svg";
-import bgMd from '../../images/gradients/green_gradient_md.svg'
+import bgMd from "../../images/gradients/green_gradient_md.svg";
 
 const Highlighted = styled.span`
   color: #3acbbc;
@@ -25,18 +25,18 @@ const members = [
   {
     img: Anurag,
     name: "Anurag Baheti",
-    role: "CEO & Co-Founder",
+    role: "CEO & Founder",
   },
-  {
-    img: Anmol,
-    name: "Anmol Bhutada",
-    role: "CTO & Co-Founder",
-  },
+  // {
+  //   img: Anmol,
+  //   name: "Anmol Bhutada",
+  //   role: "CTO & Co-Founder",
+  // },
 ];
 
 const TeamMembers = (props) => {
   return (
-    <Box position={'relative'}>
+    <Box position={"relative"}>
       <Box
         ref={props.teamMembersRef}
         display="flex"
@@ -46,7 +46,7 @@ const TeamMembers = (props) => {
         gap={{ xs: 1.5, md: 3 }}
         my={{ xs: 5, md: 10 }}
         zIndex={999}
-        minHeight={'80vh'}
+        minHeight={"80vh"}
       >
         <Typography
           className="poppins-medium"
